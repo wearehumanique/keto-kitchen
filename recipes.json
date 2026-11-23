@@ -50,7 +50,12 @@
   "id": "creamy-garlic-mushrooms",
   "warnings": [
    "Low in protein on its own. Serve with steak, chicken or eggs."
-  ]
+  ],
+  "types": [
+   "Veg & sides",
+   "Quick & easy"
+  ],
+  "time": "15 min"
  },
  {
   "added": "2026-11-23",
@@ -93,7 +98,11 @@
   "id": "crispy-pork-belly",
   "warnings": [
    "High in calories (about 600 a serve) and saturated fat. Stick to one serve."
-  ]
+  ],
+  "types": [
+   "Pork"
+  ],
+  "time": "2 hr + overnight drying"
  },
  {
   "added": "2026-11-23",
@@ -134,7 +143,12 @@
   ],
   "verdict": "High in protein and healthy fats, low in carbs. A good regular fish night that's easier to sustain than sashimi.",
   "id": "crispy-skin-salmon",
-  "warnings": []
+  "warnings": [],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "20 min"
  },
  {
   "added": "2026-11-23",
@@ -176,7 +190,12 @@
   ],
   "verdict": "Prawns are zero carb and cheaper than sashimi. The zucchini noodles stand in for pasta. Frozen Australian prawns work well and keep costs down.",
   "id": "garlic-butter-prawns",
-  "warnings": []
+  "warnings": [],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "15 min"
  },
  {
   "added": "2026-11-23",
@@ -221,7 +240,12 @@
   "warnings": [
    "High in calories (about 600 a plate).",
    "Bacon and sausages are processed and salty. Best as a weekend treat, not daily."
-  ]
+  ],
+  "types": [
+   "Eggs",
+   "Pork"
+  ],
+  "time": "20 min"
  },
  {
   "added": "2026-11-23",
@@ -270,7 +294,12 @@
   "id": "keto-kimchi-stew",
   "warnings": [
    "High in salt from the kimchi and soy. Use salt-reduced stock."
-  ]
+  ],
+  "types": [
+   "Soups",
+   "Pork"
+  ],
+  "time": "30 min"
  },
  {
   "added": "2026-11-23",
@@ -311,7 +340,13 @@
   ],
   "verdict": "A cheap, no-cook lunch. Tinned sardines or mackerel give you the omega-3s of sashimi for a few dollars a tin.",
   "id": "sardine-egg-avocado-plate",
-  "warnings": []
+  "warnings": [],
+  "types": [
+   "Seafood",
+   "Eggs",
+   "Quick & easy"
+  ],
+  "time": "10 min"
  },
  {
   "added": "2026-11-23",
@@ -352,7 +387,13 @@
   "id": "steak-and-eggs-chimichurri",
   "warnings": [
    "High in calories (about 735 a plate). Make it the main meal of the day."
-  ]
+  ],
+  "types": [
+   "Steak & beef",
+   "Eggs",
+   "Quick & easy"
+  ],
+  "time": "20 min"
  },
  {
   "added": "2026-11-23",
@@ -400,7 +441,11 @@
   "id": "steak-tartare",
   "warnings": [
    "Raw beef and raw egg yolk. Buy very fresh beef from a butcher and make it the day you buy it."
-  ]
+  ],
+  "types": [
+   "Steak & beef"
+  ],
+  "time": "15 min"
  },
  {
   "id": "chanko-nabe",
@@ -448,7 +493,12 @@
   "added": "2026-11-24",
   "warnings": [
    "Can be salty. Use salt-reduced stock and taste before adding more soy."
-  ]
+  ],
+  "types": [
+   "Soups",
+   "Chicken"
+  ],
+  "time": "40 min"
  },
  {
   "id": "pork-kimchi-hotpot",
@@ -498,7 +548,12 @@
   "warnings": [
    "High in salt from the kimchi and soy.",
    "Fairly high in calories (about 565 a serve)."
-  ]
+  ],
+  "types": [
+   "Soups",
+   "Pork"
+  ],
+  "time": "25 min"
  },
  {
   "id": "shabu-shabu",
@@ -543,7 +598,12 @@
    "Leftover broth makes a great base for the egg drop soup."
   ],
   "added": "2026-11-24",
-  "warnings": []
+  "warnings": [],
+  "types": [
+   "Soups",
+   "Steak & beef"
+  ],
+  "time": "45 min"
  },
  {
   "id": "pork-mushroom-miso-soup",
@@ -590,7 +650,12 @@
   "added": "2026-11-24",
   "warnings": [
    "High in salt from the miso and dashi. Use salt-reduced dashi or stock."
-  ]
+  ],
+  "types": [
+   "Soups",
+   "Pork"
+  ],
+  "time": "25 min"
  },
  {
   "id": "egg-drop-soup",
@@ -634,6 +699,576 @@
   "added": "2026-11-24",
   "warnings": [
    "Low in protein and calories on its own. Add chicken or prawns to make it a meal."
-  ]
+  ],
+  "types": [
+   "Soups",
+   "Eggs",
+   "Quick & easy"
+  ],
+  "time": "10 min"
+ },
+ {
+  "id": "mushroom-spinach-omelette",
+  "name": "Mushroom and spinach omelette",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "types": [
+   "Eggs",
+   "Quick & easy"
+  ],
+  "time": "10 min",
+  "servings": 1,
+  "perServing": {
+   "netCarbs": 2,
+   "kcal": 350
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "3 eggs",
+   "15 g butter",
+   "80 g mushrooms, sliced",
+   "1 handful baby spinach",
+   "1 tbsp chives, chopped",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Melt half the butter in a non-stick pan over medium-high heat and cook the mushrooms 3 minutes until golden. Add the spinach until it wilts, then tip out.",
+   "Beat the eggs with salt and pepper.",
+   "Melt the rest of the butter, pour in the eggs and stir gently for 20 seconds, then let it set.",
+   "Spoon the mushrooms and spinach over one half, fold over and slide onto a plate. Top with chives."
+  ],
+  "tips": [
+   "Add a few slices of ham or leftover steak for a bigger meal."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "korean-steamed-egg",
+  "name": "Korean steamed egg (gyeran jjim)",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "types": [
+   "Eggs",
+   "Quick & easy",
+   "Veg & sides"
+  ],
+  "time": "15 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 1,
+   "kcal": 170
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "4 eggs",
+   "200 ml chicken stock or water",
+   "1 tsp fish sauce or 1/2 tsp salt",
+   "1 spring onion, finely sliced",
+   "1 tsp sesame oil",
+   "Pinch of chilli flakes and sesame seeds"
+  ],
+  "method": [
+   "Whisk the eggs, stock and fish sauce until smooth.",
+   "Pour into a small heatproof bowl or claypot and stir in most of the spring onion.",
+   "Steam over simmering water, covered, for 10 to 12 minutes until just set and puffy (or cook in a small pot on low heat with the lid on).",
+   "Drizzle with sesame oil and top with the rest of the spring onion, chilli and sesame seeds."
+  ],
+  "tips": [
+   "Great next to bulgogi or pork belly."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "soy-marinated-eggs",
+  "name": "Soy-marinated eggs",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Snack",
+   "Breakfast"
+  ],
+  "types": [
+   "Eggs",
+   "Snacks"
+  ],
+  "time": "15 min + 4 hr soak",
+  "servings": 6,
+  "perServing": {
+   "netCarbs": 1,
+   "kcal": 80
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "6 eggs",
+   "125 ml tamari or soy sauce",
+   "125 ml water",
+   "1 tbsp granulated sweetener (optional, instead of sugar)",
+   "2 garlic cloves, sliced",
+   "1 long red chilli, sliced",
+   "2 spring onions, sliced",
+   "1 tsp sesame seeds"
+  ],
+  "method": [
+   "Boil the eggs for 6 1/2 minutes for jammy yolks, then put them straight into iced water. Peel.",
+   "Mix the tamari, water, sweetener, garlic, chilli and spring onion in a container.",
+   "Add the eggs, cover and refrigerate at least 4 hours or overnight. Sprinkle with sesame seeds to serve."
+  ],
+  "tips": [
+   "Keeps 3 days in the fridge. Great with the steamed egg or in soups."
+  ],
+  "warnings": [
+   "The marinade is very salty. Eat 1 or 2 at a time and don't drink the marinade."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "bacon-egg-cups",
+  "name": "Bacon and egg cups",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Breakfast",
+   "Snack"
+  ],
+  "types": [
+   "Eggs",
+   "Pork",
+   "Quick & easy"
+  ],
+  "time": "25 min",
+  "servings": 3,
+  "perServing": {
+   "netCarbs": 1,
+   "kcal": 250
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "6 short-cut bacon rashers",
+   "6 eggs",
+   "1 handful baby spinach, chopped",
+   "1 tbsp chives, chopped",
+   "Oil spray",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Heat the oven to 200°C fan-forced. Spray 6 holes of a muffin tin.",
+   "Line each hole with a bacon rasher to make a cup. Add a little spinach.",
+   "Crack an egg into each and season.",
+   "Bake 12 to 15 minutes until the whites are set. Top with chives."
+  ],
+  "tips": [
+   "Make a batch on Sunday. They keep 3 days in the fridge and reheat in 30 seconds."
+  ],
+  "warnings": [
+   "Bacon is processed and salty. Fine a few times a week, not every day."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "bulgogi-lettuce-cups",
+  "name": "Beef bulgogi lettuce cups",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner",
+   "Lunch"
+  ],
+  "types": [
+   "Steak & beef",
+   "Quick & easy"
+  ],
+  "time": "20 min + 30 min marinate",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 4,
+   "kcal": 360
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "600 g scotch fillet or rump, very thinly sliced (or bulgogi beef from an Asian grocer)",
+   "3 tbsp tamari or soy sauce",
+   "1 tbsp sesame oil",
+   "3 garlic cloves, minced",
+   "1 tbsp grated ginger",
+   "1 tsp granulated sweetener (optional, instead of sugar and pear)",
+   "1/2 tsp black pepper",
+   "3 spring onions, sliced",
+   "1 butter lettuce, leaves separated",
+   "1 Lebanese cucumber, cut into sticks",
+   "Kimchi and sesame seeds, to serve"
+  ],
+  "method": [
+   "Mix the tamari, sesame oil, garlic, ginger, sweetener and pepper. Toss through the beef and leave 30 minutes (or overnight).",
+   "Heat a large frying pan until very hot. Cook the beef in two batches for 2 to 3 minutes until browned.",
+   "Toss through the spring onion.",
+   "Serve in lettuce leaves with cucumber, kimchi and sesame seeds."
+  ],
+  "tips": [
+   "Pork shoulder slices work too (that's dwaeji bulgogi). Add 1 tsp gochugaru for spice."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "pork-larb",
+  "name": "Pork larb lettuce cups",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "types": [
+   "Pork",
+   "Quick & easy"
+  ],
+  "time": "15 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 4,
+   "kcal": 330
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "500 g pork mince",
+   "1 tbsp oil",
+   "2 tbsp fish sauce",
+   "3 tbsp lime juice",
+   "2 eschalots, thinly sliced",
+   "1 stalk lemongrass, finely chopped (or 1 tbsp paste)",
+   "1/2 tsp chilli flakes",
+   "1 large handful mint leaves",
+   "1 large handful coriander",
+   "2 spring onions, sliced",
+   "1 iceberg or cos lettuce, leaves separated",
+   "1 Lebanese cucumber, sliced"
+  ],
+  "method": [
+   "Heat the oil in a frying pan over high heat. Add the pork and lemongrass and cook 6 to 8 minutes, breaking it up, until cooked and a little crispy.",
+   "Take off the heat. Stir in the fish sauce, lime juice, chilli and eschalots.",
+   "Toss through the herbs and spring onion.",
+   "Spoon into lettuce cups and serve with cucumber."
+  ],
+  "tips": [
+   "Chicken or beef mince work just as well.",
+   "The traditional version uses toasted rice powder; leave it out."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "sheet-pan-chicken-thighs",
+  "name": "Sheet-pan chicken thighs with mushrooms and broccoli",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "types": [
+   "Chicken",
+   "Quick & easy"
+  ],
+  "time": "45 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 6,
+   "kcal": 580
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "8 chicken thighs, bone in and skin on (about 1.2 kg)",
+   "400 g mushrooms (cup or Swiss brown), halved",
+   "1 head broccoli (about 400 g), cut into florets",
+   "4 garlic cloves, smashed",
+   "2 tbsp olive oil",
+   "1 lemon, halved",
+   "4 sprigs thyme or rosemary",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Heat the oven to 220°C fan-forced.",
+   "Rub the chicken with half the oil, salt and pepper and put skin side up on a large tray. Roast 20 minutes.",
+   "Toss the mushrooms, broccoli and garlic with the rest of the oil and add to the tray with the herbs and lemon.",
+   "Roast 20 minutes more until the skin is crisp and the chicken is cooked through. Squeeze the roasted lemon over."
+  ],
+  "tips": [
+   "One tray, almost no washing up. Leftovers are great in the egg drop soup."
+  ],
+  "warnings": [
+   "Fairly high in calories (about 580 a serve) because of the skin. Remove the skin for a lighter meal."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "garlic-chilli-calamari",
+  "name": "Garlic chilli calamari",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "15 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 6,
+   "kcal": 330
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "500 g squid tubes, cleaned",
+   "2 tbsp olive oil",
+   "3 garlic cloves, sliced",
+   "1 long red chilli, sliced",
+   "1 lemon",
+   "2 tbsp parsley, chopped",
+   "2 handfuls rocket",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Cut the squid open, score the inside in a criss-cross pattern and cut into pieces. Pat dry and season.",
+   "Heat a large frying pan until smoking. Add half the oil and the squid and cook 1 to 2 minutes until it curls and turns white. Don't overcook.",
+   "Lower the heat, add the rest of the oil, garlic and chilli for 30 seconds.",
+   "Squeeze in lemon, toss through parsley and serve on rocket."
+  ],
+  "tips": [
+   "Frozen squid tubes from the supermarket are cheap and work well."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "tuna-stuffed-avocado",
+  "name": "Tuna-stuffed avocado",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Snack"
+  ],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "5 min",
+  "servings": 1,
+  "perServing": {
+   "netCarbs": 4,
+   "kcal": 480
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "1 ripe avocado, halved, stone removed",
+   "1 tin tuna in olive oil (95 g), drained",
+   "1/4 Lebanese cucumber, finely diced",
+   "1 tsp capers, chopped",
+   "1 spring onion, sliced",
+   "Squeeze of lemon",
+   "Pinch of chilli flakes, salt and pepper"
+  ],
+  "method": [
+   "Mix the tuna, cucumber, capers, spring onion, lemon, chilli, salt and pepper.",
+   "Pile into the avocado halves and eat with a spoon."
+  ],
+  "tips": [
+   "Swap the tuna for tinned salmon or smoked trout."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "prosciutto-asparagus",
+  "name": "Prosciutto-wrapped asparagus",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Snack"
+  ],
+  "types": [
+   "Pork",
+   "Snacks",
+   "Veg & sides"
+  ],
+  "time": "15 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 3,
+   "kcal": 180
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "1 bunch asparagus (about 12 spears), woody ends snapped off",
+   "6 slices prosciutto, halved lengthways",
+   "1 tbsp olive oil",
+   "Lemon wedges and pepper, to serve"
+  ],
+  "method": [
+   "Heat the oven to 200°C fan-forced.",
+   "Wrap each spear in a strip of prosciutto. Lay on a tray and drizzle with oil.",
+   "Bake 10 to 12 minutes until the prosciutto is crisp. Serve with lemon and pepper."
+  ],
+  "tips": [
+   "Also good wrapped around green beans or with a soft-boiled egg for dipping."
+  ],
+  "warnings": [
+   "Prosciutto is cured and salty. Keep it to snack-sized portions."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "dark-chocolate-bark",
+  "name": "Dark chocolate nut bark",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dessert",
+   "Snack"
+  ],
+  "types": [
+   "Desserts"
+  ],
+  "time": "15 min + 1 hr set",
+  "servings": 12,
+  "perServing": {
+   "netCarbs": 3,
+   "kcal": 135
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "200 g dark chocolate, 85% cocoa or higher (e.g. Lindt 90%)",
+   "50 g almonds, roughly chopped",
+   "40 g macadamias, roughly chopped",
+   "1 tbsp pumpkin seeds",
+   "Pinch of flaky salt"
+  ],
+  "method": [
+   "Line a tray with baking paper.",
+   "Melt the chocolate in a bowl over simmering water (or in 20-second bursts in the microwave).",
+   "Spread thinly on the tray and scatter over the nuts, seeds and salt.",
+   "Refrigerate 1 hour until set, then break into 12 pieces. Keep in the fridge."
+  ],
+  "tips": [
+   "Freeze half so it's not all in reach."
+  ],
+  "warnings": [
+   "High in calories (about 135 a piece). Stick to 1 or 2 pieces.",
+   "Use 85% cocoa or higher. 70% chocolate has much more sugar."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "coffee-jelly",
+  "name": "Coffee jelly",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dessert"
+  ],
+  "types": [
+   "Desserts"
+  ],
+  "time": "10 min + 3 hr set",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 0,
+   "kcal": 15
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "500 ml strong black coffee (decaf for evenings)",
+   "3 tsp powdered gelatine",
+   "2 tbsp granulated sweetener (erythritol or allulose)",
+   "Optional: a splash of unsweetened almond milk to serve"
+  ],
+  "method": [
+   "Sprinkle the gelatine over 60 ml of the coffee and leave 5 minutes to soften.",
+   "Heat the rest of the coffee until hot but not boiling. Stir in the softened gelatine and sweetener until dissolved.",
+   "Pour into 4 small glasses or a dish and refrigerate 3 hours until set.",
+   "Serve as is, or cut into cubes with a splash of almond milk."
+  ],
+  "tips": [
+   "A light Japanese-style dessert that's almost zero carb."
+  ],
+  "warnings": [
+   "Contains caffeine. Use decaf if you're having it at night."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "chocolate-strawberries",
+  "name": "Dark chocolate strawberries",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dessert"
+  ],
+  "types": [
+   "Desserts"
+  ],
+  "time": "15 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 6,
+   "kcal": 120
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "250 g strawberries, washed and dried well",
+   "60 g dark chocolate, 90% cocoa",
+   "1 tsp coconut oil"
+  ],
+  "method": [
+   "Line a plate with baking paper.",
+   "Melt the chocolate with the coconut oil.",
+   "Dip each strawberry halfway, let the extra drip off and put on the plate.",
+   "Chill 15 minutes until set."
+  ],
+  "tips": [
+   "Raspberries are even lower in carbs if you want to swap."
+  ],
+  "warnings": [
+   "Strawberries have natural sugar. Stick to about 4 or 5 berries a serve."
+  ],
+  "added": "2026-11-24"
  }
 ]
