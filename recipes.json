@@ -47,7 +47,10 @@
    "Make it a main by serving it on a steak or with sliced chicken thigh."
   ],
   "verdict": "Keto friendly as a side. Most of the carbs come from the garlic and onion, not the mushrooms. Low in protein, so pair it with steak, chicken or eggs. Don't serve it over rice or pasta like the original suggests, as that would spike your blood sugar.",
-  "id": "creamy-garlic-mushrooms"
+  "id": "creamy-garlic-mushrooms",
+  "warnings": [
+   "Low in protein on its own. Serve with steak, chicken or eggs."
+  ]
  },
  {
   "added": "2026-11-23",
@@ -87,7 +90,10 @@
    "Leftover slices are great in the kimchi stew."
   ],
   "verdict": "Pork belly is close to zero carbs. Have it with greens or cauliflower rice, not white rice. Use tamari or soy sauce, and skip sweet sauces like hoisin or char siu.",
-  "id": "crispy-pork-belly"
+  "id": "crispy-pork-belly",
+  "warnings": [
+   "High in calories (about 600 a serve) and saturated fat. Stick to one serve."
+  ]
  },
  {
   "added": "2026-11-23",
@@ -127,7 +133,8 @@
    "Swap in ocean trout or barramundi when they're on special."
   ],
   "verdict": "High in protein and healthy fats, low in carbs. A good regular fish night that's easier to sustain than sashimi.",
-  "id": "crispy-skin-salmon"
+  "id": "crispy-skin-salmon",
+  "warnings": []
  },
  {
   "added": "2026-11-23",
@@ -168,7 +175,8 @@
    "Don't overcook the zucchini or it goes watery."
   ],
   "verdict": "Prawns are zero carb and cheaper than sashimi. The zucchini noodles stand in for pasta. Frozen Australian prawns work well and keep costs down.",
-  "id": "garlic-butter-prawns"
+  "id": "garlic-butter-prawns",
+  "warnings": []
  },
  {
   "added": "2026-11-23",
@@ -209,7 +217,11 @@
    "Add black pudding only if it's a low-filler one. Most use oats and are high in carbs."
   ],
   "verdict": "Everything you love about a fry-up, minus the toast, baked beans and hash brown, which are the parts that spike blood sugar. Check the sausage label: cheap sausages use breadcrumbs or rusk.",
-  "id": "keto-full-english"
+  "id": "keto-full-english",
+  "warnings": [
+   "High in calories (about 600 a plate).",
+   "Bacon and sausages are processed and salty. Best as a weekend treat, not daily."
+  ]
  },
  {
   "added": "2026-11-23",
@@ -255,7 +267,10 @@
    "Older, sourer kimchi has less sugar and more flavour."
   ],
   "verdict": "Keto friendly if you leave out the rice and use chilli flakes instead of most of the gochujang, which is high in sugar. Check the kimchi label for added sugar.",
-  "id": "keto-kimchi-stew"
+  "id": "keto-kimchi-stew",
+  "warnings": [
+   "High in salt from the kimchi and soy. Use salt-reduced stock."
+  ]
  },
  {
   "added": "2026-11-23",
@@ -295,7 +310,8 @@
    "Check flavoured tins (tomato sauce, sweet chilli) for added sugar."
   ],
   "verdict": "A cheap, no-cook lunch. Tinned sardines or mackerel give you the omega-3s of sashimi for a few dollars a tin.",
-  "id": "sardine-egg-avocado-plate"
+  "id": "sardine-egg-avocado-plate",
+  "warnings": []
  },
  {
   "added": "2026-11-23",
@@ -333,7 +349,10 @@
    "Make a jar of chimichurri on Sunday. It keeps 5 days in the fridge."
   ],
   "verdict": "Almost no carbs and very filling. A big plate, so it can easily be your main meal of the day.",
-  "id": "steak-and-eggs-chimichurri"
+  "id": "steak-and-eggs-chimichurri",
+  "warnings": [
+   "High in calories (about 735 a plate). Make it the main meal of the day."
+  ]
  },
  {
   "added": "2026-11-23",
@@ -378,7 +397,10 @@
    "Add a few drops of fish sauce or a little anchovy for extra depth with no carbs."
   ],
   "verdict": "Very low carb and high protein. Serve on cucumber slices or lettuce cups instead of toast or chips. Use very fresh, good-quality beef from a butcher you trust.",
-  "id": "steak-tartare"
+  "id": "steak-tartare",
+  "warnings": [
+   "Raw beef and raw egg yolk. Buy very fresh beef from a butcher and make it the day you buy it."
+  ]
  },
  {
   "id": "chanko-nabe",
@@ -423,7 +445,10 @@
    "Make a double batch of meatballs and freeze half raw for next time.",
    "Add sliced pork belly or prawns for a bigger pot."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "warnings": [
+   "Can be salty. Use salt-reduced stock and taste before adding more soy."
+  ]
  },
  {
   "id": "pork-kimchi-hotpot",
@@ -469,7 +494,11 @@
    "Swap the pork for leftover crispy pork belly from the recipe on this page.",
    "Add a handful of spinach at the end for more greens."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "warnings": [
+   "High in salt from the kimchi and soy.",
+   "Fairly high in calories (about 565 a serve)."
+  ]
  },
  {
   "id": "shabu-shabu",
@@ -513,7 +542,8 @@
    "Use thinly sliced pork belly instead of beef for a change.",
    "Leftover broth makes a great base for the egg drop soup."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "warnings": []
  },
  {
   "id": "pork-mushroom-miso-soup",
@@ -557,7 +587,10 @@
   "tips": [
    "Use pork shoulder instead of belly for a leaner soup with more protein."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "warnings": [
+   "High in salt from the miso and dashi. Use salt-reduced dashi or stock."
+  ]
  },
  {
   "id": "egg-drop-soup",
@@ -598,6 +631,9 @@
    "Add 150 g shredded cooked chicken to bring the protein up to about 30 g a serve.",
    "Leftover shabu shabu broth makes it even better."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "warnings": [
+   "Low in protein and calories on its own. Add chicken or prawns to make it a meal."
+  ]
  }
 ]
