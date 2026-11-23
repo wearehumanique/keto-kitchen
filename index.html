@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Aaron's Keto Kitchen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: a recipe box. Summary strip, meal-type filter chips, then a grid of cards that open into full recipes. */
+:root{
+  --bg:#F3F6F1; --surface:#FFFFFF; --fg:#18221C; --muted:#5B6B60; --line:#DCE4DA;
+  --accent:#3F6E2A; --accent-soft:#E3EEDB;
+  --good:#2F7A3A; --good-soft:#DFF1E2; --watch:#9A6400; --watch-soft:#FBEFD6; --avoid:#B3362E; --avoid-soft:#F9E0DD;
+  --display:"Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --body:"Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111713; --surface:#18201B; --fg:#E6EDE6; --muted:#9AAA9E; --line:#2A352D;
+  --accent:#8CC46B; --accent-soft:#22331C;
+  --good:#7DD18A; --good-soft:#183222; --watch:#F0B652; --watch-soft:#33280F; --avoid:#F08A80; --avoid-soft:#3A1C19;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111713; --surface:#18201B; --fg:#E6EDE6; --muted:#9AAA9E; --line:#2A352D;
+  --accent:#8CC46B; --accent-soft:#22331C;
+  --good:#7DD18A; --good-soft:#183222; --watch:#F0B652; --watch-soft:#33280F; --avoid:#F08A80; --avoid-soft:#3A1C19;
+  color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:4px 0 0;max-width:62ch}
+.stats{display:flex;flex-wrap:wrap;gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.stat b{display:block;font-family:var(--display);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.key{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.85rem;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.chip:focus-visible,.card summary:focus-visible,#q:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#q{font:inherit;flex:1 1 200px;min-width:0;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:7px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.card summary{list-style:none;cursor:pointer;padding:16px;display:grid;gap:10px}
+.card summary::-webkit-details-marker{display:none}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.top h3{font-size:1.15rem;font-weight:600}
+.pill{flex:none;font-size:.75rem;font-weight:600;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.watch{background:var(--watch-soft);color:var(--watch)}
+.pill.avoid{background:var(--avoid-soft);color:var(--avoid)}
+.macros{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-variant-numeric:tabular-nums}
+.macros div{background:var(--bg);border-radius:8px;padding:6px 8px}
+.macros b{display:block;font-size:1.05rem}
+.macros span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.macros .carb{background:var(--accent-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-size:.75rem;color:var(--muted)}
+.tags span{border:1px solid var(--line);border-radius:6px;padding:1px 8px}
+.more{font-size:.8rem;color:var(--accent);font-weight:600}
+.card[open] .more{display:none}
+.body{padding:0 16px 18px;display:grid;gap:14px;border-top:1px solid var(--line);padding-top:14px}
+.body h4{margin:0 0 4px;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.body ul,.body ol{margin:0;padding-left:1.2em;display:grid;gap:3px}
+.verdict{border-radius:8px;padding:10px 12px;font-size:.9rem}
+.verdict.good{background:var(--good-soft)} .verdict.watch{background:var(--watch-soft)} .verdict.avoid{background:var(--avoid-soft)}
+.src{font-size:.85rem;color:var(--muted)} .src a{color:var(--accent)}
+.empty,.status{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:24px;color:var(--muted);text-align:center}
+.foot{font-size:.8rem;color:var(--muted);max-width:70ch}
+.add{font:inherit;font-size:.8rem;font-weight:600;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:8px;padding:5px 10px;cursor:pointer;justify-self:start}
+.add[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.add:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.shop{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:16px;display:grid;gap:10px}
+.shop h2{font-size:1.2rem}
+.shop ul{margin:0;padding-left:1.2em;columns:2 240px;column-gap:24px}
+.shop li{break-inside:avoid;margin-bottom:3px}
+.shop .for{font-size:.85rem;color:var(--muted)}
+.btn{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 12px;cursor:pointer}
+@media (max-width:420px){.macros{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <h1>Keto Kitchen</h1>
+    <p class="sub">Aaron's low-carb meals. Tap a recipe to see ingredients and method. Tap “Add to shopping list” on the ones you're cooking this week. Numbers are estimates per serving; net carbs = total carbs minus fibre.</p>
+  </header>
+
+  <div class="stats" id="stats">
+    <div class="stat"><b id="sCount">–</b><span>Recipes</span></div>
+    <div class="stat"><b id="sGood">–</b><span>Keto friendly</span></div>
+    <div class="stat"><b id="sLow">–</b><span>Lowest net carbs</span></div>
+  </div>
+
+  <div class="key">
+    <span><span class="pill good">Keto friendly</span> under ~10 g net carbs a serve</span>
+    <span><span class="pill watch">Watch it</span> fine with tweaks or small serves</span>
+    <span><span class="pill avoid">Likely spike</span> skip or rework</span>
+  </div>
+
+  <section class="shop" id="shop" hidden>
+    <div class="row"><h2>Shopping list</h2><div class="tools"><button class="btn" id="copy">Copy list</button><button class="btn" id="clear">Clear</button></div></div>
+    <p class="for" id="shopFor"></p>
+    <ul id="shopList"></ul>
+    <p class="for">Pantry items like salt, pepper and oil are included, so skip what you already have. This list is saved on your device only.</p>
+  </section>
+
+  <div class="tools" role="toolbar" aria-label="Filter recipes">
+    <input id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes">
+    <div id="chips" class="tools"></div>
+  </div>
+
+  <div id="list" class="grid" aria-live="polite">
+    
+  </div>
+
+  <p class="foot">Estimates use standard Australian nutrition values and may be off by a few grams. Check your own labels for exact numbers.</p>
+</div>
+
+<script type="application/json" id="recipe-data">[{"added": "2026-11-23", "ingredients": ["450 g button or cup mushrooms (2 punnets), whole", "30 g butter (2 tbsp)", "10 garlic cloves, minced", "1/2 brown onion, diced", "1 tsp salt", "60–125 ml thickened or pure cream (1/4–1/2 cup)", "1 tbsp milk", "1 tsp cayenne pepper or paprika", "1/2 tsp chilli flakes", "Fresh parsley, chopped, to garnish"], "meal": ["Side", "Dinner"], "method": ["Rinse the mushrooms and dry them well with a clean tea towel.", "Mince the garlic and dice the onion.", "Melt the butter in a heavy-based frying pan over medium heat without letting it burn.", "Add the garlic and onion and cook for about 1 minute, stirring so nothing burns.", "Turn the heat up, add the mushrooms and season with salt.", "Stir often for 2–3 minutes, lowering the heat if needed.", "Pour in the cream and milk, add the cayenne or paprika, and simmer about 2 minutes until the sauce thickens.", "Take off the heat once the sauce is as thick as you like.", "Sprinkle with parsley and chilli flakes and serve straight away."], "name": "Creamy garlic mushrooms", "perServing": {"fat": 22, "kcal": 265, "netCarbs": 10, "protein": 7}, "rating": "good", "servings": 3, "source": {"label": "Chhaya Joshi on Facebook", "url": "https://www.facebook.com/reel/1693047938910850"}, "tips": ["No-cream version: skip the cream and milk. Once the mushrooms are golden, add a splash of soy sauce or tamari and fresh thyme, and finish with lemon juice.", "Use 1/4 onion and 5 garlic cloves to drop to about 6 g net carbs a serve.", "Make it a main by serving it on a steak or with sliced chicken thigh."], "verdict": "Keto friendly as a side. Most of the carbs come from the garlic and onion, not the mushrooms. Low in protein, so pair it with steak, chicken or eggs. Don't serve it over rice or pasta like the original suggests, as that would spike your blood sugar.", "id": "creamy-garlic-mushrooms"}, {"added": "2026-11-23", "ingredients": ["1 kg pork belly, skin on, boneless", "2 tsp salt flakes", "1 tsp Chinese five spice", "2 tbsp tamari or soy sauce", "4 baby bok choy, halved", "2 garlic cloves, sliced", "1 tsp sesame oil"], "meal": ["Dinner"], "method": ["The day before (or at least 2 hours ahead), score the skin, pat it very dry and leave uncovered in the fridge.", "Rub the meat side (not the skin) with five spice and 1 tbsp tamari. Rub salt into the skin.", "Roast at 160°C fan for 1 hour 30 minutes.", "Turn up to 230°C and roast 20–30 minutes until the skin crackles all over. Rest 10 minutes.", "Meanwhile, stir-fry the garlic in sesame oil, add the bok choy and the rest of the tamari, and cook 2–3 minutes.", "Slice the pork and serve with the bok choy."], "name": "Crispy pork belly with garlic bok choy", "perServing": {"fat": 55, "kcal": 600, "netCarbs": 2, "protein": 23}, "rating": "good", "servings": 4, "source": {"label": "Made for your tastes"}, "tips": ["Leftover slices are great in the kimchi stew."], "verdict": "Pork belly is close to zero carbs. Have it with greens or cauliflower rice, not white rice. Use tamari or soy sauce, and skip sweet sauces like hoisin or char siu.", "id": "crispy-pork-belly"}, {"added": "2026-11-23", "ingredients": ["2 salmon fillets, skin on (about 180 g each)", "1 tbsp olive oil", "20 g butter", "2 garlic cloves, sliced", "1 tbsp lemon juice", "1 bunch broccolini (about 175 g)", "Salt flakes"], "meal": ["Dinner"], "method": ["Pat the salmon skin very dry and season with salt.", "Heat the oil in a pan over medium-high heat. Cook the salmon skin side down for 5–6 minutes, pressing gently, until the skin is crisp.", "Flip and cook 1–2 minutes more. Set aside.", "Steam or blanch the broccolini for 2–3 minutes.", "In the same pan, melt the butter with the garlic until it foams. Add the lemon juice.", "Plate the salmon and broccolini and spoon the lemon butter over."], "name": "Crispy skin salmon with lemon butter and broccolini", "perServing": {"fat": 38, "kcal": 515, "netCarbs": 5, "protein": 38}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Swap in ocean trout or barramundi when they're on special."], "verdict": "High in protein and healthy fats, low in carbs. A good regular fish night that's easier to sustain than sashimi.", "id": "crispy-skin-salmon"}, {"added": "2026-11-23", "ingredients": ["400 g raw prawns, peeled and deveined (frozen is fine)", "40 g butter", "4 garlic cloves, minced", "1 long red chilli, sliced (or 1/2 tsp chilli flakes)", "1 tbsp lemon juice", "2 medium zucchini (about 400 g), spiralised", "2 tbsp parsley, chopped", "Salt and pepper"], "meal": ["Dinner"], "method": ["Pat the prawns dry and season with salt.", "Melt half the butter in a large pan over high heat. Cook the prawns 1–2 minutes a side until just pink, then set aside.", "Lower the heat, add the rest of the butter, the garlic and chilli and cook 1 minute.", "Add the zucchini noodles and toss 2 minutes until just soft.", "Return the prawns, add the lemon juice and parsley and toss. Serve."], "name": "Garlic butter prawns with zucchini noodles", "perServing": {"fat": 18, "kcal": 350, "netCarbs": 7, "protein": 42}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Add a few sliced mushrooms with the garlic for extra bulk.", "Don't overcook the zucchini or it goes watery."], "verdict": "Prawns are zero carb and cheaper than sashimi. The zucchini noodles stand in for pasta. Frozen Australian prawns work well and keep costs down.", "id": "garlic-butter-prawns"}, {"added": "2026-11-23", "ingredients": ["2 eggs", "2 middle bacon rashers (about 70 g)", "1 thick beef or pork sausage, 90%+ meat, gluten free (about 70 g)", "100 g mushrooms, sliced", "1/2 tomato, cut side up", "1 handful baby spinach", "15 g butter", "Salt and pepper"], "meal": ["Breakfast"], "method": ["Fry the sausage over medium heat for about 12 minutes, turning, until cooked through.", "Add the bacon and the tomato (cut side down) to the same pan and cook 3–4 minutes.", "Push everything to one side, add the butter and the mushrooms and cook until golden.", "Wilt the spinach in the pan for 30 seconds.", "Fry the eggs in the leftover fat to your liking. Season and serve."], "name": "Keto full English breakfast", "perServing": {"fat": 46, "kcal": 600, "netCarbs": 6, "protein": 42}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Swap the tomato for extra mushrooms to save about 1.5 g carbs.", "Add black pudding only if it's a low-filler one. Most use oats and are high in carbs."], "verdict": "Everything you love about a fry-up, minus the toast, baked beans and hash brown, which are the parts that spike blood sugar. Check the sausage label: cheap sausages use breadcrumbs or rusk.", "id": "keto-full-english"}, {"added": "2026-11-23", "ingredients": ["200 g pork belly, thinly sliced", "300 g well-fermented kimchi (no added sugar), chopped, plus 3 tbsp of its juice", "1 tbsp gochugaru (Korean chilli flakes)", "1 tsp gochujang (optional, no more than this)", "1/2 small onion (50 g), sliced", "2 garlic cloves, minced", "1 tbsp sesame oil", "1 tbsp tamari or soy sauce", "600 ml water or anchovy stock", "300 g firm tofu, cut into cubes", "2 spring onions, sliced"], "meal": ["Lunch", "Dinner"], "method": ["Heat the sesame oil in a pot over medium-high heat. Fry the pork belly 3–4 minutes until it starts to brown.", "Add the kimchi, onion and garlic and fry 5 minutes.", "Stir in the gochugaru, gochujang (if using), tamari and kimchi juice.", "Pour in the water or stock, bring to the boil, then simmer 15–20 minutes.", "Add the tofu and simmer 5 more minutes.", "Top with spring onion and serve hot, without rice."], "name": "Kimchi stew with pork belly (kimchi jjigae)", "perServing": {"fat": 46, "kcal": 520, "netCarbs": 7, "protein": 19}, "rating": "good", "servings": 3, "source": {"label": "Made for your tastes"}, "tips": ["Crack an egg into each bowl in the last 3 minutes for extra protein.", "Older, sourer kimchi has less sugar and more flavour."], "verdict": "Keto friendly if you leave out the rice and use chilli flakes instead of most of the gochujang, which is high in sugar. Check the kimchi label for added sugar.", "id": "keto-kimchi-stew"}, {"added": "2026-11-23", "ingredients": ["1 tin sardines or mackerel in olive oil (about 110 g), drained", "2 eggs, boiled for 7 minutes", "1/2 avocado", "1/2 Lebanese cucumber, sliced", "Handful of rocket", "Squeeze of lemon", "Pinch of chilli flakes, salt and pepper"], "meal": ["Lunch", "Breakfast"], "method": ["Boil the eggs for 7 minutes, cool in cold water and peel.", "Smash the avocado with lemon, salt and pepper.", "Plate the rocket, cucumber, avocado, halved eggs and sardines.", "Finish with chilli flakes and a drizzle of oil from the tin."], "name": "Sardine, egg and avocado plate", "perServing": {"fat": 33, "kcal": 470, "netCarbs": 5, "protein": 37}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Try smoked mussels or salmon in springwater for variety.", "Check flavoured tins (tomato sauce, sweet chilli) for added sugar."], "verdict": "A cheap, no-cook lunch. Tinned sardines or mackerel give you the omega-3s of sashimi for a few dollars a tin.", "id": "sardine-egg-avocado-plate"}, {"added": "2026-11-23", "ingredients": ["200 g scotch fillet, at room temperature", "2 eggs", "5 g butter", "Handful of rocket", "Chimichurri: 1/2 cup flat-leaf parsley, 1 garlic clove, 1/2 tsp dried oregano, pinch of chilli flakes, 1 tbsp red wine vinegar, 20 ml extra virgin olive oil, salt"], "meal": ["Breakfast", "Dinner"], "method": ["Finely chop the parsley and garlic and mix with the oregano, chilli, vinegar, oil and salt. Let it sit while you cook.", "Pat the steak dry and season with salt.", "Sear in a very hot pan 2–3 minutes a side for medium-rare. Rest 5 minutes.", "Fry the eggs in butter in the same pan.", "Slice the steak, top with chimichurri and serve with the eggs and rocket."], "name": "Steak and eggs with chimichurri", "perServing": {"fat": 57, "kcal": 735, "netCarbs": 3, "protein": 53}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Make a jar of chimichurri on Sunday. It keeps 5 days in the fridge."], "verdict": "Almost no carbs and very filling. A big plate, so it can easily be your main meal of the day.", "id": "steak-and-eggs-chimichurri"}, {"added": "2026-11-23", "ingredients": ["300 g beef eye fillet, very cold", "2 egg yolks", "1 eschalot (about 20 g), finely diced", "1 tbsp capers, chopped", "2 cornichons, finely chopped", "1 tsp Dijon mustard", "1 tsp Worcestershire sauce", "Few drops Tabasco", "1 tbsp extra virgin olive oil", "1 tbsp parsley, finely chopped", "Salt and pepper", "1 Lebanese cucumber, thickly sliced, to serve"], "meal": ["Lunch", "Dinner"], "method": ["Trim any sinew from the beef and dice it finely by hand (don't mince it).", "Mix the eschalot, capers, cornichons, mustard, Worcestershire, Tabasco, oil and parsley in a bowl.", "Fold the beef through and season well.", "Shape into two rounds on plates, make a small well on top and drop in an egg yolk.", "Serve straight away with cucumber slices."], "name": "Steak tartare with cucumber crisps", "perServing": {"fat": 21, "kcal": 340, "netCarbs": 4, "protein": 34}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Add a few drops of fish sauce or a little anchovy for extra depth with no carbs."], "verdict": "Very low carb and high protein. Serve on cucumber slices or lettuce cups instead of toast or chips. Use very fresh, good-quality beef from a butcher you trust.", "id": "steak-tartare"}]</script>
+<script>
+const MEALS=["All","Breakfast","Lunch","Dinner","Side","Snack","Dessert","Drink"];
+let recipes=[], meal="All", q="";
+let picks=[]; try{picks=JSON.parse(localStorage.getItem("kk-picks")||"[]")}catch(e){}
+function savePicks(){try{localStorage.setItem("kk-picks",JSON.stringify(picks))}catch(e){}}
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const label={good:"Keto friendly",watch:"Watch it",avoid:"Likely spike"};
+
+function chips(){
+  $("chips").innerHTML=MEALS.map(m=>`<button class="chip" id="chip-${m}" aria-pressed="${m===meal}">${m}</button>`).join("");
+  MEALS.forEach(m=>$("chip-"+m).onclick=()=>{meal=m;chips();render();});
+}
+function card(r){
+  const p=r.perServing||{}; const rt=r.rating||"watch";
+  const link=r.source&&r.source.url?`<a href="${esc(r.source.url)}" target="_blank" rel="noopener">${esc(r.source.label||"Original")}</a>`:esc(r.source&&r.source.label||"");
+  return `<details class="card"><summary>
+    <div class="top"><h3>${esc(r.name)}</h3><span class="pill ${rt}">${label[rt]||rt}</span></div>
+    <div class="macros">
+      <div class="carb"><b>${esc(p.netCarbs)} g</b><span>Net carbs</span></div>
+      <div><b>${esc(p.protein)} g</b><span>Protein</span></div>
+      <div><b>${esc(p.fat)} g</b><span>Fat</span></div>
+      <div><b>${esc(p.kcal)}</b><span>kcal</span></div>
+    </div>
+    <div class="tags">${(r.meal||[]).map(m=>`<span>${esc(m)}</span>`).join("")}<span>Serves ${esc(r.servings)}</span></div>
+    <button class="add" data-id="${esc(r.id)}" aria-pressed="${picks.includes(r.id)}">${picks.includes(r.id)?"✓ On shopping list":"+ Add to shopping list"}</button>
+    <span class="more">Show recipe</span>
+  </summary>
+  <div class="body">
+    <div class="verdict ${rt}">${esc(r.verdict)}</div>
+    <div><h4>Ingredients</h4><ul>${(r.ingredients||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>
+    <div><h4>Method</h4><ol>${(r.method||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ol></div>
+    ${(r.tips||[]).length?`<div><h4>Make it more keto</h4><ul>${r.tips.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>`:""}
+    <div class="src">Source: ${link}${r.added?` · Added ${esc(r.added)}`:""}</div>
+  </div></details>`;
+}
+function render(){
+  const good=recipes.filter(r=>r.rating==="good");
+  $("sCount").textContent=recipes.length;
+  $("sGood").textContent=good.length;
+  const low=recipes.slice().sort((a,b)=>(a.perServing?.netCarbs??99)-(b.perServing?.netCarbs??99))[0];
+  $("sLow").textContent=low?`${low.perServing?.netCarbs} g`:"–";
+  if(!recipes.length){$("list").innerHTML=`<div class="empty">No recipes yet. Drop a recipe link or photo in the Keto project and it will appear here.</div>`;return;}
+  const ql=q.trim().toLowerCase();
+  const shown=recipes.filter(r=>(meal==="All"||(r.meal||[]).includes(meal))&&(!ql||(r.name+" "+(r.ingredients||[]).join(" ")).toLowerCase().includes(ql)));
+  $("list").innerHTML=shown.length?shown.map(card).join(""):`<div class="empty">Nothing matches that filter.</div>`;
+  shop();
+}
+function shop(){
+  const sel=recipes.filter(r=>picks.includes(r.id));
+  $("shop").hidden=!sel.length;
+  if(!sel.length)return;
+  $("shopFor").textContent="For: "+sel.map(r=>r.name).join(", ");
+  const seen=new Set(), items=[];
+  sel.forEach(r=>(r.ingredients||[]).forEach(i=>{const k=i.toLowerCase();if(!seen.has(k)){seen.add(k);items.push(i);}}));
+  $("shopList").innerHTML=items.map(i=>`<li>${esc(i)}</li>`).join("");
+}
+$("list").addEventListener("click",e=>{
+  const b=e.target.closest(".add"); if(!b)return;
+  e.preventDefault(); e.stopPropagation();
+  const id=b.dataset.id;
+  picks=picks.includes(id)?picks.filter(x=>x!==id):[...picks,id];
+  savePicks();
+  const on=picks.includes(id); b.setAttribute("aria-pressed",on); b.textContent=on?"✓ On shopping list":"+ Add to shopping list";
+  shop();
+});
+$("clear").onclick=()=>{picks=[];savePicks();render();};
+$("copy").onclick=()=>{
+  const sel=recipes.filter(r=>picks.includes(r.id));
+  const txt="Shopping list ("+sel.map(r=>r.name).join(", ")+")\n"+[...$("shopList").querySelectorAll("li")].map(li=>"- "+li.textContent).join("\n");
+  const done=()=>{$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy list",1500);};
+  try{navigator.clipboard.writeText(txt).then(done,()=>{const r=document.createRange();r.selectNodeContents($("shopList"));const s=getSelection();s.removeAllRanges();s.addRange(r);});}catch(err){}
+};
+chips();
+$("q").addEventListener("input",e=>{q=e.target.value;render();});
+
+recipes=JSON.parse(document.getElementById("recipe-data").textContent).sort((a,b)=>(b.added||"").localeCompare(a.added||"")||a.name.localeCompare(b.name));
+render();
+</script>
+
+</body>
+</html>
