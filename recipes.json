@@ -379,5 +379,225 @@
   ],
   "verdict": "Very low carb and high protein. Serve on cucumber slices or lettuce cups instead of toast or chips. Use very fresh, good-quality beef from a butcher you trust.",
   "id": "steak-tartare"
+ },
+ {
+  "id": "chanko-nabe",
+  "name": "Chanko nabe with chicken meatballs and mushrooms",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner",
+   "Lunch"
+  ],
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 7,
+   "protein": 35,
+   "fat": 18,
+   "kcal": 330
+  },
+  "rating": "good",
+  "verdict": "A light, brothy sumo hotpot that's high in protein and easy on blood sugar. Skip the udon or rice usually added at the end. Freezes well without the tofu.",
+  "ingredients": [
+   "Meatballs: 500 g chicken thigh mince, 1 egg, 1 tbsp grated ginger, 1 spring onion finely chopped, 1 tbsp tamari or soy sauce, pinch of salt",
+   "1.5 L dashi or chicken stock",
+   "3 tbsp tamari or soy sauce",
+   "1 tbsp sake (optional)",
+   "300 g firm tofu, cubed",
+   "1/4 wombok (Chinese cabbage, about 400 g), chopped",
+   "200 g fresh shiitake mushrooms",
+   "100 g enoki mushrooms, base trimmed",
+   "2 baby bok choy, halved",
+   "2 spring onions, cut into 4 cm lengths"
+  ],
+  "method": [
+   "Mix the meatball ingredients well with your hands. Chill 10 minutes if it's soft.",
+   "Bring the stock, tamari and sake to a simmer in a wide pot.",
+   "Roll heaped tablespoons of mince into balls and drop them into the broth. Simmer 8 minutes.",
+   "Add the wombok stems and shiitake and simmer 3 minutes.",
+   "Add the tofu, wombok leaves, bok choy, enoki and spring onion and simmer 3 to 4 minutes more.",
+   "Serve at the table straight from the pot."
+  ],
+  "tips": [
+   "Make a double batch of meatballs and freeze half raw for next time.",
+   "Add sliced pork belly or prawns for a bigger pot."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "pork-kimchi-hotpot",
+  "name": "Pork and kimchi hotpot with mushrooms",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 8,
+   "protein": 23,
+   "fat": 49,
+   "kcal": 565
+  },
+  "rating": "good",
+  "verdict": "A spicy army-stew style hotpot without the ramen noodles, baked beans or processed meats that push the carbs up. Keep the gochujang to 1 teaspoon.",
+  "ingredients": [
+   "300 g pork belly, thinly sliced",
+   "300 g well-fermented kimchi (no added sugar), chopped",
+   "1 L chicken or anchovy stock",
+   "1 tbsp gochugaru (Korean chilli flakes)",
+   "1 tsp gochujang (no more)",
+   "2 garlic cloves, minced",
+   "1 tbsp tamari or soy sauce",
+   "200 g mixed mushrooms (shiitake, oyster or king brown), sliced",
+   "100 g enoki mushrooms",
+   "300 g firm tofu, sliced",
+   "2 cups wombok (Chinese cabbage), chopped",
+   "4 eggs",
+   "3 spring onions, sliced"
+  ],
+  "method": [
+   "Mix the gochugaru, gochujang, garlic and tamari into a paste.",
+   "Arrange the pork, kimchi, cabbage, mushrooms and tofu in sections in a wide shallow pot. Put the paste in the middle.",
+   "Pour in the stock and bring to the boil, then simmer 10 to 12 minutes until the pork is cooked.",
+   "Crack the eggs into the broth, add the enoki and simmer 3 minutes.",
+   "Top with spring onion and serve at the table."
+  ],
+  "tips": [
+   "Swap the pork for leftover crispy pork belly from the recipe on this page.",
+   "Add a handful of spinach at the end for more greens."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "shabu-shabu",
+  "name": "Shabu shabu hotpot",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 7,
+   "protein": 41,
+   "fat": 23,
+   "kcal": 400
+  },
+  "rating": "good",
+  "verdict": "Fun to eat at the table and very low carb. Bottled ponzu and sesame dipping sauces often have added sugar, so make the simple dipping sauce below instead.",
+  "ingredients": [
+   "600 g shabu shabu beef (very thinly sliced scotch fillet, from an Asian grocer)",
+   "1 piece kombu (dried kelp), about 10 cm",
+   "1.5 L water",
+   "300 g firm tofu, cubed",
+   "1/4 wombok (about 400 g), chopped",
+   "200 g fresh shiitake mushrooms",
+   "100 g enoki mushrooms",
+   "2 baby bok choy, halved",
+   "4 spring onions, cut into lengths",
+   "Dipping sauce: 4 tbsp tamari or soy sauce, 2 tbsp lemon juice, 1 tsp grated ginger, sliced spring onion"
+  ],
+  "method": [
+   "Soak the kombu in the water for 30 minutes, then bring it slowly to a simmer and remove the kombu just before it boils.",
+   "Mix the dipping sauce and divide into small bowls.",
+   "Arrange the beef and vegetables on platters.",
+   "Keep the broth simmering at the table (a portable burner works best). Add vegetables, tofu and mushrooms first.",
+   "Each person swishes a slice of beef in the broth for 10 to 20 seconds until just cooked, then dips it in the sauce.",
+   "Drink the rich broth at the end as soup."
+  ],
+  "tips": [
+   "Use thinly sliced pork belly instead of beef for a change.",
+   "Leftover broth makes a great base for the egg drop soup."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "pork-mushroom-miso-soup",
+  "name": "Pork and mushroom miso soup",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 7,
+   "protein": 16,
+   "fat": 44,
+   "kcal": 485
+  },
+  "rating": "good",
+  "verdict": "A hearty Japanese pork miso soup (tonjiru) without the potato and carrot. Miso has some carbs, so stick to about 3 tablespoons for the pot. Freezes well; add the miso when you reheat if you can.",
+  "ingredients": [
+   "300 g pork belly, thinly sliced",
+   "1 L dashi or chicken stock",
+   "3 tbsp white or red miso paste",
+   "200 g mixed mushrooms (shiitake and shimeji or oyster), sliced",
+   "100 g daikon (white radish), cut into thin half-moons",
+   "200 g firm tofu, cubed",
+   "2 cups wombok (Chinese cabbage), chopped",
+   "1 tsp sesame oil",
+   "2 spring onions, sliced",
+   "Shichimi or chilli flakes, to serve"
+  ],
+  "method": [
+   "Heat the sesame oil in a pot and fry the pork 3 minutes until it starts to brown.",
+   "Add the mushrooms and daikon and fry 2 minutes.",
+   "Pour in the dashi, bring to the boil, skim off any foam and simmer 10 minutes until the daikon is tender.",
+   "Add the tofu and cabbage and simmer 3 minutes.",
+   "Turn the heat to low. Mix the miso with a ladle of broth until smooth, then stir it in. Don't let it boil after this.",
+   "Serve topped with spring onion and shichimi."
+  ],
+  "tips": [
+   "Use pork shoulder instead of belly for a leaner soup with more protein."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "egg-drop-soup",
+  "name": "Mushroom egg drop soup",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Snack"
+  ],
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 4,
+   "protein": 14,
+   "fat": 10,
+   "kcal": 160
+  },
+  "rating": "good",
+  "verdict": "Ready in 5 to 10 minutes and very low carb. It's light, so add shredded chicken or prawns to make it a meal. Restaurant versions are thickened with cornflour; this one isn't.",
+  "ingredients": [
+   "750 ml chicken stock (salt-reduced)",
+   "3 eggs, beaten",
+   "100 g shiitake mushrooms, sliced",
+   "1 tsp grated ginger",
+   "1 tbsp tamari or soy sauce",
+   "1 tsp sesame oil",
+   "2 spring onions, sliced",
+   "White pepper"
+  ],
+  "method": [
+   "Bring the stock, ginger, tamari and mushrooms to a simmer and cook 3 minutes.",
+   "Stir the soup in a circle, then slowly pour in the beaten eggs in a thin stream so they form ribbons.",
+   "Leave it for 30 seconds, then stir gently.",
+   "Add the sesame oil, white pepper and spring onion and serve."
+  ],
+  "tips": [
+   "Add 150 g shredded cooked chicken to bring the protein up to about 30 g a serve.",
+   "Leftover shabu shabu broth makes it even better."
+  ],
+  "added": "2026-11-24"
  }
 ]
