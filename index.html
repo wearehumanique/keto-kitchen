@@ -6,280 +6,226 @@
 <meta name="robots" content="noindex,nofollow">
 <style>*,*::before,*::after{box-sizing:border-box}html{color-scheme:light}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Keto Kitchen</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap">
 <style>
-/* Layout: earthy papercut header; home view asks "What would you like?" with big paper tiles by meal and by type; a category view lists recipe cards with ingredients first; a shopping list view ticks items off. */
+/* Layout: slim header with search and list button; home asks "What would you like?" with simple category tiles (or rows); a category shows a clean list of recipes; tapping one opens a single recipe page with ingredients first. */
 :root{
-  --bg:#F2EADC; --paper:#FFFBF4; --ink:#2E2219; --muted:#76634F; --edge:#E2D4BE; --shadow:rgba(80,50,25,.16);
-  --sky:#EBCF9F; --dune:#D79B5E; --clay:#B4552F; --olive:#6E7B3B; --ochre:#C98B2B; --cream:#FBF2E2;
-  --on-clay:#FFFBF4; --on-ochre:#2E2219; --on-olive:#FFFBF4; --on-dune:#2E2219;
-  --paperback:rgba(70,40,15,.28); --accent:#A94A26; --accent-ink:#FFFBF4; --warn:#8A4B00; --warn-bg:#FBE6C4; --tick:#6E7B3B;
+  --bg:#F6F1EA; --surface:#FFFDF9; --ink:#2A211A; --muted:#7A6D60; --line:#E8DFD3; --accent:#9C4A28; --accent-ink:#FFFDF9; --soft:#F0E6D8;
+  --warn:#8A4B00; --warn-bg:#FBEBD0;
   --display:"Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --body:"Nunito Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --body:"Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1D1712; --paper:#28211A; --ink:#F1E6D6; --muted:#BCA88F; --edge:#3A3026; --shadow:rgba(0,0,0,.5);
-  --sky:#2C2219; --dune:#5A3B22; --clay:#8E4426; --olive:#8C9B50; --ochre:#D9A24A; --cream:#EADBC2;
-  --on-clay:#F7EBDD; --on-ochre:#1D1712; --on-olive:#1D1712; --on-dune:#F1E6D6;
-  --accent:#E58A5E; --accent-ink:#1D1712; --warn:#F3C27A; --warn-bg:#3A2A14; --tick:#A9BA6A;
-  color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#1D1712; --paper:#28211A; --ink:#F1E6D6; --muted:#BCA88F; --edge:#3A3026; --shadow:rgba(0,0,0,.5);
-  --sky:#2C2219; --dune:#5A3B22; --clay:#8E4426; --olive:#8C9B50; --ochre:#D9A24A; --cream:#EADBC2;
-  --on-clay:#F7EBDD; --on-ochre:#1D1712; --on-olive:#1D1712; --on-dune:#F1E6D6;
-  --accent:#E58A5E; --accent-ink:#1D1712; --warn:#F3C27A; --warn-bg:#3A2A14; --tick:#A9BA6A;
-  color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
-.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.inner{max-width:1100px;margin:0 auto}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
-button{font:inherit}
+body.s-a{--bg:#FFFFFF; --surface:#FFFFFF; --ink:#1E1B18; --muted:#6E675F; --line:#ECE8E3; --accent:#B4552F; --accent-ink:#FFFFFF; --soft:#F6F3EF}
+body.s-c{--bg:#FBF8F3; --surface:#FBF8F3; --ink:#26201A; --muted:#7C7064; --line:#DDD3C6; --accent:#5F6B34; --accent-ink:#FBF8F3; --soft:#F1ECE3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body{
+  --bg:#1B1714; --surface:#231E1A; --ink:#F0E8DE; --muted:#B3A595; --line:#3A322B; --accent:#E3916A; --accent-ink:#1B1714; --soft:#2C2620; --warn:#F2C27C; --warn-bg:#382A16; color-scheme:dark}
+ :root:not([data-theme="light"]) body.s-c{--accent:#B5C27A}}
+:root[data-theme="dark"] body{
+  --bg:#1B1714; --surface:#231E1A; --ink:#F0E8DE; --muted:#B3A595; --line:#3A322B; --accent:#E3916A; --accent-ink:#1B1714; --soft:#2C2620; --warn:#F2C27C; --warn-bg:#382A16; color-scheme:dark}
+:root[data-theme="dark"] body.s-c{--accent:#B5C27A}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.gut{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em}
+button{font:inherit;color:inherit}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
-.hero{background:var(--sky);margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 2rem)}
-.hero .inner{display:grid;gap:8px;position:relative;z-index:1}
-h1{font-size:clamp(2.4rem,8vw,4.6rem);font-weight:800;letter-spacing:-.03em;line-height:.95}
-h1 a{text-decoration:none}
-.lede{margin:0;max-width:46ch;font-size:1.05rem}
-.scene{display:block;width:100%;height:auto;margin-top:-24px}
-.scene .lay{filter:drop-shadow(0 5px 5px var(--shadow))}
-
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--edge)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-.bar .inner{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.home{font-weight:800;border:1px solid var(--edge);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
-#q{font:inherit;font-size:1rem;flex:1 1 200px;min-width:0;border:1px solid var(--edge);background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 16px}
-.listbtn{font-weight:800;font-size:.95rem;border:none;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:9px 16px;cursor:pointer;box-shadow:0 3px 0 var(--clay)}
-.listbtn b{background:var(--accent-ink);color:var(--accent);border-radius:999px;padding:0 8px;margin-left:6px;font-variant-numeric:tabular-nums}
+header .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:1.2rem;text-decoration:none;margin-right:auto;letter-spacing:-.02em}
+.brand i{font-style:normal;color:var(--accent)}
+.listbtn{border:none;background:var(--ink);color:var(--bg);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.9rem;cursor:pointer}
+.listbtn b{font-variant-numeric:tabular-nums;margin-left:4px;opacity:.75}
+#q{flex:1 1 100%;order:3;min-width:0;font:inherit;font-size:1rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:10px 14px}
 
-main{padding-block:28px 64px}
-main .inner{display:grid;gap:28px}
-.ask{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;letter-spacing:-.02em}
-.group{display:grid;gap:12px}
-.group h3{font-family:var(--body);font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:800}
-.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
-.tile{position:relative;isolation:isolate;border:none;border-radius:18px;padding:16px;min-height:132px;cursor:pointer;text-align:left;display:grid;align-content:space-between;gap:10px;box-shadow:5px 6px 0 var(--paperback),0 14px 24px var(--shadow);transition:transform .15s ease}
-.tile:nth-child(even){box-shadow:-5px 6px 0 var(--paperback),0 14px 24px var(--shadow)}
-.tile.clay{background:var(--clay);color:var(--on-clay)} .tile.ochre{background:var(--ochre);color:var(--on-ochre)}
-.tile.olive{background:var(--olive);color:var(--on-olive)} .tile.dune{background:var(--dune);color:var(--on-dune)}
-.tile svg{width:44px;height:44px}
-.tile strong{display:block;font-family:var(--display);font-size:1.3rem;line-height:1.1}
-.tile span{font-size:.85rem;font-weight:700;opacity:.85}
-@media (hover:hover){.tile:hover{transform:translateY(-3px)}}
+main{padding-block:28px 72px}
+main .wrap{display:grid;gap:22px}
+.ask{font-size:clamp(1.9rem,6vw,2.6rem);font-weight:700;line-height:1.1}
+.label{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600;margin:6px 0 -8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tile{border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:16px;text-align:left;cursor:pointer;display:grid;gap:14px;transition:border-color .15s}
+.tile svg{width:28px;height:28px;color:var(--accent)}
+.tile strong{display:block;font-weight:600;font-size:1.02rem;line-height:1.25}
+.tile span{font-size:.82rem;color:var(--muted)}
+@media (hover:hover){.tile:hover{border-color:var(--accent)}}
+body.s-a .tile{background:var(--soft);border-color:transparent}
+body.s-c .tiles{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+body.s-c .tile{grid-template-columns:28px 1fr auto;align-items:center;border:none;border-bottom:1px solid var(--line);border-radius:0;padding:14px 2px;background:none}
+body.s-c .tile strong{font-family:var(--display);font-size:1.3rem;font-weight:600}
+body.s-c .tile span{font-size:.9rem}
 
-.crumb{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
-.crumb h2{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800}
-.crumb p{margin:0;color:var(--muted);font-weight:700}
+.back{border:none;background:none;padding:0;color:var(--muted);cursor:pointer;font-size:.95rem;justify-self:start}
+.ttl{display:grid;gap:4px}
+.ttl h2{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1}
+.ttl p{margin:0;color:var(--muted)}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{border-bottom:1px solid var(--line)}
+.rows button{width:100%;border:none;background:none;text-align:left;cursor:pointer;padding:14px 2px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center}
+.rows strong{font-weight:600;font-size:1.05rem;line-height:1.3}
+.rows small{grid-column:1;color:var(--muted);font-size:.85rem}
+.rows .chev{grid-row:1 / span 2;grid-column:2;color:var(--muted)}
+.rows .on{color:var(--accent);font-weight:600}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--warn);margin:0 6px 1px 0;vertical-align:middle}
 
-.shop{background:var(--paper);border-radius:18px;padding:20px;box-shadow:0 2px 0 var(--edge),0 10px 24px var(--shadow);display:grid;gap:12px;border-top:8px solid var(--olive)}
-.shop .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
-.shop .for{margin:0;color:var(--muted);font-size:.92rem}
-.items{list-style:none;margin:0;padding:0;columns:2 260px;column-gap:28px}
-.items li{break-inside:avoid;padding:6px 0;border-bottom:1px dashed var(--edge)}
-.items label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
-.items input{width:22px;height:22px;margin-top:2px;accent-color:var(--tick);flex:none}
+.recipe{display:grid;gap:22px}
+.recipe h2{font-size:clamp(2rem,7vw,2.8rem);line-height:1.08}
+.facts{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:.95rem}
+.warns{display:grid;gap:8px}
+.warn{background:var(--warn-bg);color:var(--warn);border-radius:12px;padding:10px 14px;font-size:.93rem;font-weight:500}
+.sec h3{font-size:1.25rem;margin-bottom:8px}
+.ing{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ing li{padding:11px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:10px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;color:var(--accent);font-size:1.15rem;line-height:1.5}
+.tips{margin:0;padding-left:1.2em;display:grid;gap:6px;color:var(--muted)}
+.add{width:100%;border:none;border-radius:14px;padding:14px;font-weight:600;font-size:1rem;cursor:pointer;background:var(--accent);color:var(--accent-ink)}
+.add[aria-pressed="true"]{background:var(--soft);color:var(--ink)}
+.src{font-size:.85rem;color:var(--muted)}
+
+.items{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.items li{border-bottom:1px solid var(--line)}
+.items label{display:flex;gap:12px;align-items:flex-start;padding:11px 0;cursor:pointer;font-size:1.02rem}
+.items input{width:22px;height:22px;margin-top:2px;accent-color:var(--accent);flex:none}
 .items input:checked + span{text-decoration:line-through;color:var(--muted)}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn{font-size:.9rem;font-weight:700;border:1px solid var(--edge);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;align-items:start}
-.card{background:var(--paper);border-radius:18px;box-shadow:0 2px 0 var(--edge),0 10px 24px var(--shadow);overflow:hidden;min-width:0;display:grid}
-.card .head{padding:18px 20px 12px;display:grid;gap:8px;background:linear-gradient(var(--clay),var(--clay)) top/100% 6px no-repeat}
-.card:nth-child(3n+2) .head{background-image:linear-gradient(var(--ochre),var(--ochre))}
-.card:nth-child(3n) .head{background-image:linear-gradient(var(--olive),var(--olive))}
-.card h3{font-size:1.35rem;font-weight:800;line-height:1.15}
-.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.85rem;color:var(--muted);font-weight:700}
-.warn{display:flex;gap:8px;align-items:flex-start;background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:8px 10px;font-size:.88rem;font-weight:700;line-height:1.35}
-.warn svg{flex:none;margin-top:1px}
-.ing{padding:4px 20px 16px}
-.ing h4,.cook h4{margin:0 0 6px;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-.ing ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
-.ing li{padding:5px 0 5px 18px;position:relative;border-bottom:1px dashed var(--edge)}
-.ing li:last-child{border-bottom:none}
-.ing li::before{content:"";position:absolute;left:2px;top:.8em;width:7px;height:7px;border-radius:50%;background:var(--ochre)}
-.acts{display:flex;gap:8px;padding:0 20px 16px}
-.add{flex:1 1 auto;font-size:.95rem;font-weight:800;border:2px solid var(--accent);background:transparent;color:var(--accent);border-radius:999px;padding:8px 14px;cursor:pointer}
-.add[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
-.cook{border-top:1px solid var(--edge);background:var(--bg)}
-.cook summary{cursor:pointer;padding:14px 20px;font-weight:800;list-style:none;display:flex;justify-content:space-between;align-items:center}
-.cook summary::-webkit-details-marker{display:none}
-.cook summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent)}
-.cook[open] summary::after{content:"–"}
-.cook .body{padding:0 20px 20px;display:grid;gap:14px}
-.cook ol,.cook ul{margin:0;padding-left:1.3em;display:grid;gap:6px}
-.note{margin:0;font-size:.92rem;color:var(--muted)}
-.src{font-size:.85rem;color:var(--muted)} .src a{color:var(--accent)}
-.empty{background:var(--paper);border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
-footer{background:var(--dune);color:var(--on-dune);padding-block:26px 36px}
-footer p{margin:0;max-width:70ch;font-size:.88rem}
-@media (max-width:640px){.scene{margin-top:6px}.bar{position:static}.tiles{grid-template-columns:repeat(2,1fr);gap:14px}.tile{min-height:118px}}
-@media (prefers-reduced-motion:no-preference){
-  .steam path{animation:rise 3.6s ease-in-out infinite}
-  .steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
-  @keyframes rise{0%,100%{transform:translateY(0);opacity:.95}50%{transform:translateY(-8px);opacity:.55}}
-}
-@media (prefers-reduced-motion:reduce){.tile{transition:none}}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.9rem;cursor:pointer}
+.empty{color:var(--muted);padding:24px 0}
+footer{padding-block:24px 40px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+footer p{margin:0}
+@media (min-width:700px){#q{flex:0 1 280px;order:0}}
 </style>
 </head>
 <body>
 
 
-<header class="hero">
-  <div class="inner gut">
-    <h1><a href="#">Keto Kitchen</a></h1>
-    <p class="lede">Low-carb home cooking: steak, eggs, seafood, pork, soups and easy weeknight meals.</p>
-  </div>
-  <svg class="scene" viewBox="0 0 1200 300" role="img" aria-label="Papercut dunes with mushrooms and a steaming bowl">
-    <circle class="lay" cx="860" cy="70" r="40" fill="var(--ochre)"/>
-    <path class="lay" fill="var(--dune)" d="M0,150 C160,90 320,130 460,110 C620,85 760,150 920,115 C1040,90 1120,120 1200,100 L1200,300 L0,300 Z"/>
-    <path class="lay" fill="var(--clay)" d="M0,205 C140,170 280,200 420,180 C560,160 700,210 860,190 C1000,172 1100,200 1200,180 L1200,300 L0,300 Z"/>
-    <g class="lay">
-      <path fill="var(--cream)" d="M992,222 C987,192 989,170 995,158 L1019,158 C1025,170 1027,192 1022,222 Z"/>
-      <path fill="var(--ochre)" d="M954,166 C958,114 1056,114 1060,166 C1030,174 984,174 954,166 Z"/>
-      <circle cx="985" cy="145" r="6" fill="var(--cream)"/><circle cx="1012" cy="132" r="8" fill="var(--cream)"/><circle cx="1036" cy="150" r="5" fill="var(--cream)"/>
-    </g>
-    <g class="lay">
-      <path fill="var(--cream)" d="M1086,232 C1084,212 1085,198 1089,192 L1101,192 C1105,198 1106,212 1104,232 Z"/>
-      <path fill="var(--olive)" d="M1068,196 C1071,166 1119,166 1122,196 C1104,201 1086,201 1068,196 Z"/>
-    </g>
-    <path class="lay" fill="var(--bg)" d="M0,250 C200,225 360,262 560,240 C760,220 940,262 1200,236 L1200,300 L0,300 Z"/>
-    <path class="lay" fill="var(--olive)" d="M24,246 C44,200 96,190 120,198 C100,228 70,246 24,246 Z"/>
-    <g class="steam" fill="none" stroke="var(--cream)" stroke-width="7" stroke-linecap="round">
-      <path d="M238,206 C229,188 251,175 242,152"/><path d="M268,206 C259,186 281,172 272,146"/><path d="M298,206 C289,188 311,175 302,152"/>
-    </g>
-    <g class="lay">
-      <path fill="var(--olive)" d="M190,232 L350,232 C345,282 300,296 270,296 C240,296 195,282 190,232 Z"/>
-      <rect x="182" y="223" width="176" height="13" rx="6.5" fill="var(--cream)"/>
-    </g>
-  </svg>
-</header>
-
-<div class="bar gut">
-  <div class="inner">
-    <button class="home" id="homeBtn" hidden>← All categories</button>
-    <input id="q" type="search" placeholder="Search a recipe or ingredient" aria-label="Search recipes">
+<header class="gut">
+  <div class="wrap">
+    <a class="brand" href="#">Keto <i>Kitchen</i></a>
+    <input id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes">
     <button class="listbtn" id="listBtn">Shopping list<b id="count">0</b></button>
   </div>
-</div>
+</header>
 
-<main class="gut"><div class="inner" id="view"></div></main>
+<main class="gut"><div class="wrap" id="view" data-style="b"></div></main>
 
-<footer class="gut"><div class="inner"><p>All recipes are low carb and suited to a ketogenic diet. Amber warnings flag dishes that are high in calories or salt, or need extra care.</p></div></footer>
+<footer class="gut"><div class="wrap"><p>Low-carb recipes for a ketogenic diet. Amber notes flag dishes that are high in calories or salt, or need extra care.</p></div></footer>
 
 <script type="application/json" id="recipe-data">[{"added": "2026-11-23", "ingredients": ["450 g button or cup mushrooms (2 punnets), whole", "30 g butter (2 tbsp)", "10 garlic cloves, minced", "1/2 brown onion, diced", "1 tsp salt", "60–125 ml thickened or pure cream (1/4–1/2 cup)", "1 tbsp milk", "1 tsp cayenne pepper or paprika", "1/2 tsp chilli flakes", "Fresh parsley, chopped, to garnish"], "meal": ["Side", "Dinner"], "method": ["Rinse the mushrooms and dry them well with a clean tea towel.", "Mince the garlic and dice the onion.", "Melt the butter in a heavy-based frying pan over medium heat without letting it burn.", "Add the garlic and onion and cook for about 1 minute, stirring so nothing burns.", "Turn the heat up, add the mushrooms and season with salt.", "Stir often for 2–3 minutes, lowering the heat if needed.", "Pour in the cream and milk, add the cayenne or paprika, and simmer about 2 minutes until the sauce thickens.", "Take off the heat once the sauce is as thick as you like.", "Sprinkle with parsley and chilli flakes and serve straight away."], "name": "Creamy garlic mushrooms", "perServing": {"fat": 22, "kcal": 265, "netCarbs": 10, "protein": 7}, "rating": "good", "servings": 3, "source": {"label": "Chhaya Joshi on Facebook", "url": "https://www.facebook.com/reel/1693047938910850"}, "tips": ["No-cream version: skip the cream and milk. Once the mushrooms are golden, add a splash of soy sauce or tamari and fresh thyme, and finish with lemon juice.", "Use 1/4 onion and 5 garlic cloves to drop to about 6 g net carbs a serve.", "Make it a main by serving it on a steak or with sliced chicken thigh."], "verdict": "Keto friendly as a side. Most of the carbs come from the garlic and onion, not the mushrooms. Low in protein, so pair it with steak, chicken or eggs. Don't serve it over rice or pasta like the original suggests, as that would spike your blood sugar.", "id": "creamy-garlic-mushrooms", "warnings": ["Low in protein on its own. Serve with steak, chicken or eggs."], "types": ["Veg & sides", "Quick & easy"], "time": "15 min"}, {"added": "2026-11-23", "ingredients": ["1 kg pork belly, skin on, boneless", "2 tsp salt flakes", "1 tsp Chinese five spice", "2 tbsp tamari or soy sauce", "4 baby bok choy, halved", "2 garlic cloves, sliced", "1 tsp sesame oil"], "meal": ["Dinner"], "method": ["The day before (or at least 2 hours ahead), score the skin, pat it very dry and leave uncovered in the fridge.", "Rub the meat side (not the skin) with five spice and 1 tbsp tamari. Rub salt into the skin.", "Roast at 160°C fan for 1 hour 30 minutes.", "Turn up to 230°C and roast 20–30 minutes until the skin crackles all over. Rest 10 minutes.", "Meanwhile, stir-fry the garlic in sesame oil, add the bok choy and the rest of the tamari, and cook 2–3 minutes.", "Slice the pork and serve with the bok choy."], "name": "Crispy pork belly with garlic bok choy", "perServing": {"fat": 55, "kcal": 600, "netCarbs": 2, "protein": 23}, "rating": "good", "servings": 4, "source": {"label": "Made for your tastes"}, "tips": ["Leftover slices are great in the kimchi stew."], "verdict": "Pork belly is close to zero carbs. Have it with greens or cauliflower rice, not white rice. Use tamari or soy sauce, and skip sweet sauces like hoisin or char siu.", "id": "crispy-pork-belly", "warnings": ["High in calories (about 600 a serve) and saturated fat. Stick to one serve."], "types": ["Pork"], "time": "2 hr + overnight drying"}, {"added": "2026-11-23", "ingredients": ["2 salmon fillets, skin on (about 180 g each)", "1 tbsp olive oil", "20 g butter", "2 garlic cloves, sliced", "1 tbsp lemon juice", "1 bunch broccolini (about 175 g)", "Salt flakes"], "meal": ["Dinner"], "method": ["Pat the salmon skin very dry and season with salt.", "Heat the oil in a pan over medium-high heat. Cook the salmon skin side down for 5–6 minutes, pressing gently, until the skin is crisp.", "Flip and cook 1–2 minutes more. Set aside.", "Steam or blanch the broccolini for 2–3 minutes.", "In the same pan, melt the butter with the garlic until it foams. Add the lemon juice.", "Plate the salmon and broccolini and spoon the lemon butter over."], "name": "Crispy skin salmon with lemon butter and broccolini", "perServing": {"fat": 38, "kcal": 515, "netCarbs": 5, "protein": 38}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Swap in ocean trout or barramundi when they're on special."], "verdict": "High in protein and healthy fats, low in carbs. A good regular fish night that's easier to sustain than sashimi.", "id": "crispy-skin-salmon", "warnings": [], "types": ["Seafood", "Quick & easy"], "time": "20 min"}, {"added": "2026-11-23", "ingredients": ["400 g raw prawns, peeled and deveined (frozen is fine)", "40 g butter", "4 garlic cloves, minced", "1 long red chilli, sliced (or 1/2 tsp chilli flakes)", "1 tbsp lemon juice", "2 medium zucchini (about 400 g), spiralised", "2 tbsp parsley, chopped", "Salt and pepper"], "meal": ["Dinner"], "method": ["Pat the prawns dry and season with salt.", "Melt half the butter in a large pan over high heat. Cook the prawns 1–2 minutes a side until just pink, then set aside.", "Lower the heat, add the rest of the butter, the garlic and chilli and cook 1 minute.", "Add the zucchini noodles and toss 2 minutes until just soft.", "Return the prawns, add the lemon juice and parsley and toss. Serve."], "name": "Garlic butter prawns with zucchini noodles", "perServing": {"fat": 18, "kcal": 350, "netCarbs": 7, "protein": 42}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Add a few sliced mushrooms with the garlic for extra bulk.", "Don't overcook the zucchini or it goes watery."], "verdict": "Prawns are zero carb and cheaper than sashimi. The zucchini noodles stand in for pasta. Frozen Australian prawns work well and keep costs down.", "id": "garlic-butter-prawns", "warnings": [], "types": ["Seafood", "Quick & easy"], "time": "15 min"}, {"added": "2026-11-23", "ingredients": ["2 eggs", "2 middle bacon rashers (about 70 g)", "1 thick beef or pork sausage, 90%+ meat, gluten free (about 70 g)", "100 g mushrooms, sliced", "1/2 tomato, cut side up", "1 handful baby spinach", "15 g butter", "Salt and pepper"], "meal": ["Breakfast"], "method": ["Fry the sausage over medium heat for about 12 minutes, turning, until cooked through.", "Add the bacon and the tomato (cut side down) to the same pan and cook 3–4 minutes.", "Push everything to one side, add the butter and the mushrooms and cook until golden.", "Wilt the spinach in the pan for 30 seconds.", "Fry the eggs in the leftover fat to your liking. Season and serve."], "name": "Keto full English breakfast", "perServing": {"fat": 46, "kcal": 600, "netCarbs": 6, "protein": 42}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Swap the tomato for extra mushrooms to save about 1.5 g carbs.", "Add black pudding only if it's a low-filler one. Most use oats and are high in carbs."], "verdict": "Everything you love about a fry-up, minus the toast, baked beans and hash brown, which are the parts that spike blood sugar. Check the sausage label: cheap sausages use breadcrumbs or rusk.", "id": "keto-full-english", "warnings": ["High in calories (about 600 a plate).", "Bacon and sausages are processed and salty. Best as a weekend treat, not daily."], "types": ["Eggs", "Pork"], "time": "20 min"}, {"added": "2026-11-23", "ingredients": ["200 g pork belly, thinly sliced", "300 g well-fermented kimchi (no added sugar), chopped, plus 3 tbsp of its juice", "1 tbsp gochugaru (Korean chilli flakes)", "1 tsp gochujang (optional, no more than this)", "1/2 small onion (50 g), sliced", "2 garlic cloves, minced", "1 tbsp sesame oil", "1 tbsp tamari or soy sauce", "600 ml water or anchovy stock", "300 g firm tofu, cut into cubes", "2 spring onions, sliced"], "meal": ["Lunch", "Dinner"], "method": ["Heat the sesame oil in a pot over medium-high heat. Fry the pork belly 3–4 minutes until it starts to brown.", "Add the kimchi, onion and garlic and fry 5 minutes.", "Stir in the gochugaru, gochujang (if using), tamari and kimchi juice.", "Pour in the water or stock, bring to the boil, then simmer 15–20 minutes.", "Add the tofu and simmer 5 more minutes.", "Top with spring onion and serve hot, without rice."], "name": "Kimchi stew with pork belly (kimchi jjigae)", "perServing": {"fat": 46, "kcal": 520, "netCarbs": 7, "protein": 19}, "rating": "good", "servings": 3, "source": {"label": "Made for your tastes"}, "tips": ["Crack an egg into each bowl in the last 3 minutes for extra protein.", "Older, sourer kimchi has less sugar and more flavour."], "verdict": "Keto friendly if you leave out the rice and use chilli flakes instead of most of the gochujang, which is high in sugar. Check the kimchi label for added sugar.", "id": "keto-kimchi-stew", "warnings": ["High in salt from the kimchi and soy. Use salt-reduced stock."], "types": ["Soups", "Pork"], "time": "30 min"}, {"added": "2026-11-23", "ingredients": ["1 tin sardines or mackerel in olive oil (about 110 g), drained", "2 eggs, boiled for 7 minutes", "1/2 avocado", "1/2 Lebanese cucumber, sliced", "Handful of rocket", "Squeeze of lemon", "Pinch of chilli flakes, salt and pepper"], "meal": ["Lunch", "Breakfast"], "method": ["Boil the eggs for 7 minutes, cool in cold water and peel.", "Smash the avocado with lemon, salt and pepper.", "Plate the rocket, cucumber, avocado, halved eggs and sardines.", "Finish with chilli flakes and a drizzle of oil from the tin."], "name": "Sardine, egg and avocado plate", "perServing": {"fat": 33, "kcal": 470, "netCarbs": 5, "protein": 37}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Try smoked mussels or salmon in springwater for variety.", "Check flavoured tins (tomato sauce, sweet chilli) for added sugar."], "verdict": "A cheap, no-cook lunch. Tinned sardines or mackerel give you the omega-3s of sashimi for a few dollars a tin.", "id": "sardine-egg-avocado-plate", "warnings": [], "types": ["Seafood", "Eggs", "Quick & easy"], "time": "10 min"}, {"added": "2026-11-23", "ingredients": ["200 g scotch fillet, at room temperature", "2 eggs", "5 g butter", "Handful of rocket", "Chimichurri: 1/2 cup flat-leaf parsley, 1 garlic clove, 1/2 tsp dried oregano, pinch of chilli flakes, 1 tbsp red wine vinegar, 20 ml extra virgin olive oil, salt"], "meal": ["Breakfast", "Dinner"], "method": ["Finely chop the parsley and garlic and mix with the oregano, chilli, vinegar, oil and salt. Let it sit while you cook.", "Pat the steak dry and season with salt.", "Sear in a very hot pan 2–3 minutes a side for medium-rare. Rest 5 minutes.", "Fry the eggs in butter in the same pan.", "Slice the steak, top with chimichurri and serve with the eggs and rocket."], "name": "Steak and eggs with chimichurri", "perServing": {"fat": 57, "kcal": 735, "netCarbs": 3, "protein": 53}, "rating": "good", "servings": 1, "source": {"label": "Made for your tastes"}, "tips": ["Make a jar of chimichurri on Sunday. It keeps 5 days in the fridge."], "verdict": "Almost no carbs and very filling. A big plate, so it can easily be your main meal of the day.", "id": "steak-and-eggs-chimichurri", "warnings": ["High in calories (about 735 a plate). Make it the main meal of the day."], "types": ["Steak & beef", "Eggs", "Quick & easy"], "time": "20 min"}, {"added": "2026-11-23", "ingredients": ["300 g beef eye fillet, very cold", "2 egg yolks", "1 eschalot (about 20 g), finely diced", "1 tbsp capers, chopped", "2 cornichons, finely chopped", "1 tsp Dijon mustard", "1 tsp Worcestershire sauce", "Few drops Tabasco", "1 tbsp extra virgin olive oil", "1 tbsp parsley, finely chopped", "Salt and pepper", "1 Lebanese cucumber, thickly sliced, to serve"], "meal": ["Lunch", "Dinner"], "method": ["Trim any sinew from the beef and dice it finely by hand (don't mince it).", "Mix the eschalot, capers, cornichons, mustard, Worcestershire, Tabasco, oil and parsley in a bowl.", "Fold the beef through and season well.", "Shape into two rounds on plates, make a small well on top and drop in an egg yolk.", "Serve straight away with cucumber slices."], "name": "Steak tartare with cucumber crisps", "perServing": {"fat": 21, "kcal": 340, "netCarbs": 4, "protein": 34}, "rating": "good", "servings": 2, "source": {"label": "Made for your tastes"}, "tips": ["Add a few drops of fish sauce or a little anchovy for extra depth with no carbs."], "verdict": "Very low carb and high protein. Serve on cucumber slices or lettuce cups instead of toast or chips. Use very fresh, good-quality beef from a butcher you trust.", "id": "steak-tartare", "warnings": ["Raw beef and raw egg yolk. Buy very fresh beef from a butcher and make it the day you buy it."], "types": ["Steak & beef"], "time": "15 min"}, {"id": "chanko-nabe", "name": "Chanko nabe with chicken meatballs and mushrooms", "source": {"label": "Made for your tastes"}, "meal": ["Dinner", "Lunch"], "servings": 4, "perServing": {"netCarbs": 7, "protein": 35, "fat": 18, "kcal": 330}, "rating": "good", "verdict": "A light, brothy sumo hotpot that's high in protein and easy on blood sugar. Skip the udon or rice usually added at the end. Freezes well without the tofu.", "ingredients": ["Meatballs: 500 g chicken thigh mince, 1 egg, 1 tbsp grated ginger, 1 spring onion finely chopped, 1 tbsp tamari or soy sauce, pinch of salt", "1.5 L dashi or chicken stock", "3 tbsp tamari or soy sauce", "1 tbsp sake (optional)", "300 g firm tofu, cubed", "1/4 wombok (Chinese cabbage, about 400 g), chopped", "200 g fresh shiitake mushrooms", "100 g enoki mushrooms, base trimmed", "2 baby bok choy, halved", "2 spring onions, cut into 4 cm lengths"], "method": ["Mix the meatball ingredients well with your hands. Chill 10 minutes if it's soft.", "Bring the stock, tamari and sake to a simmer in a wide pot.", "Roll heaped tablespoons of mince into balls and drop them into the broth. Simmer 8 minutes.", "Add the wombok stems and shiitake and simmer 3 minutes.", "Add the tofu, wombok leaves, bok choy, enoki and spring onion and simmer 3 to 4 minutes more.", "Serve at the table straight from the pot."], "tips": ["Make a double batch of meatballs and freeze half raw for next time.", "Add sliced pork belly or prawns for a bigger pot."], "added": "2026-11-24", "warnings": ["Can be salty. Use salt-reduced stock and taste before adding more soy."], "types": ["Soups", "Chicken"], "time": "40 min"}, {"id": "pork-kimchi-hotpot", "name": "Pork and kimchi hotpot with mushrooms", "source": {"label": "Made for your tastes"}, "meal": ["Dinner"], "servings": 4, "perServing": {"netCarbs": 8, "protein": 23, "fat": 49, "kcal": 565}, "rating": "good", "verdict": "A spicy army-stew style hotpot without the ramen noodles, baked beans or processed meats that push the carbs up. Keep the gochujang to 1 teaspoon.", "ingredients": ["300 g pork belly, thinly sliced", "300 g well-fermented kimchi (no added sugar), chopped", "1 L chicken or anchovy stock", "1 tbsp gochugaru (Korean chilli flakes)", "1 tsp gochujang (no more)", "2 garlic cloves, minced", "1 tbsp tamari or soy sauce", "200 g mixed mushrooms (shiitake, oyster or king brown), sliced", "100 g enoki mushrooms", "300 g firm tofu, sliced", "2 cups wombok (Chinese cabbage), chopped", "4 eggs", "3 spring onions, sliced"], "method": ["Mix the gochugaru, gochujang, garlic and tamari into a paste.", "Arrange the pork, kimchi, cabbage, mushrooms and tofu in sections in a wide shallow pot. Put the paste in the middle.", "Pour in the stock and bring to the boil, then simmer 10 to 12 minutes until the pork is cooked.", "Crack the eggs into the broth, add the enoki and simmer 3 minutes.", "Top with spring onion and serve at the table."], "tips": ["Swap the pork for leftover crispy pork belly from the recipe on this page.", "Add a handful of spinach at the end for more greens."], "added": "2026-11-24", "warnings": ["High in salt from the kimchi and soy.", "Fairly high in calories (about 565 a serve)."], "types": ["Soups", "Pork"], "time": "25 min"}, {"id": "shabu-shabu", "name": "Shabu shabu hotpot", "source": {"label": "Made for your tastes"}, "meal": ["Dinner"], "servings": 4, "perServing": {"netCarbs": 7, "protein": 41, "fat": 23, "kcal": 400}, "rating": "good", "verdict": "Fun to eat at the table and very low carb. Bottled ponzu and sesame dipping sauces often have added sugar, so make the simple dipping sauce below instead.", "ingredients": ["600 g shabu shabu beef (very thinly sliced scotch fillet, from an Asian grocer)", "1 piece kombu (dried kelp), about 10 cm", "1.5 L water", "300 g firm tofu, cubed", "1/4 wombok (about 400 g), chopped", "200 g fresh shiitake mushrooms", "100 g enoki mushrooms", "2 baby bok choy, halved", "4 spring onions, cut into lengths", "Dipping sauce: 4 tbsp tamari or soy sauce, 2 tbsp lemon juice, 1 tsp grated ginger, sliced spring onion"], "method": ["Soak the kombu in the water for 30 minutes, then bring it slowly to a simmer and remove the kombu just before it boils.", "Mix the dipping sauce and divide into small bowls.", "Arrange the beef and vegetables on platters.", "Keep the broth simmering at the table (a portable burner works best). Add vegetables, tofu and mushrooms first.", "Each person swishes a slice of beef in the broth for 10 to 20 seconds until just cooked, then dips it in the sauce.", "Drink the rich broth at the end as soup."], "tips": ["Use thinly sliced pork belly instead of beef for a change.", "Leftover broth makes a great base for the egg drop soup."], "added": "2026-11-24", "warnings": [], "types": ["Soups", "Steak & beef"], "time": "45 min"}, {"id": "pork-mushroom-miso-soup", "name": "Pork and mushroom miso soup", "source": {"label": "Made for your tastes"}, "meal": ["Lunch", "Dinner"], "servings": 4, "perServing": {"netCarbs": 7, "protein": 16, "fat": 44, "kcal": 485}, "rating": "good", "verdict": "A hearty Japanese pork miso soup (tonjiru) without the potato and carrot. Miso has some carbs, so stick to about 3 tablespoons for the pot. Freezes well; add the miso when you reheat if you can.", "ingredients": ["300 g pork belly, thinly sliced", "1 L dashi or chicken stock", "3 tbsp white or red miso paste", "200 g mixed mushrooms (shiitake and shimeji or oyster), sliced", "100 g daikon (white radish), cut into thin half-moons", "200 g firm tofu, cubed", "2 cups wombok (Chinese cabbage), chopped", "1 tsp sesame oil", "2 spring onions, sliced", "Shichimi or chilli flakes, to serve"], "method": ["Heat the sesame oil in a pot and fry the pork 3 minutes until it starts to brown.", "Add the mushrooms and daikon and fry 2 minutes.", "Pour in the dashi, bring to the boil, skim off any foam and simmer 10 minutes until the daikon is tender.", "Add the tofu and cabbage and simmer 3 minutes.", "Turn the heat to low. Mix the miso with a ladle of broth until smooth, then stir it in. Don't let it boil after this.", "Serve topped with spring onion and shichimi."], "tips": ["Use pork shoulder instead of belly for a leaner soup with more protein."], "added": "2026-11-24", "warnings": ["High in salt from the miso and dashi. Use salt-reduced dashi or stock."], "types": ["Soups", "Pork"], "time": "25 min"}, {"id": "egg-drop-soup", "name": "Mushroom egg drop soup", "source": {"label": "Made for your tastes"}, "meal": ["Lunch", "Snack"], "servings": 2, "perServing": {"netCarbs": 4, "protein": 14, "fat": 10, "kcal": 160}, "rating": "good", "verdict": "Ready in 5 to 10 minutes and very low carb. It's light, so add shredded chicken or prawns to make it a meal. Restaurant versions are thickened with cornflour; this one isn't.", "ingredients": ["750 ml chicken stock (salt-reduced)", "3 eggs, beaten", "100 g shiitake mushrooms, sliced", "1 tsp grated ginger", "1 tbsp tamari or soy sauce", "1 tsp sesame oil", "2 spring onions, sliced", "White pepper"], "method": ["Bring the stock, ginger, tamari and mushrooms to a simmer and cook 3 minutes.", "Stir the soup in a circle, then slowly pour in the beaten eggs in a thin stream so they form ribbons.", "Leave it for 30 seconds, then stir gently.", "Add the sesame oil, white pepper and spring onion and serve."], "tips": ["Add 150 g shredded cooked chicken to bring the protein up to about 30 g a serve.", "Leftover shabu shabu broth makes it even better."], "added": "2026-11-24", "warnings": ["Low in protein and calories on its own. Add chicken or prawns to make it a meal."], "types": ["Soups", "Eggs", "Quick & easy"], "time": "10 min"}, {"id": "mushroom-spinach-omelette", "name": "Mushroom and spinach omelette", "source": {"label": "Made for your tastes"}, "meal": ["Breakfast", "Lunch"], "types": ["Eggs", "Quick & easy"], "time": "10 min", "servings": 1, "perServing": {"netCarbs": 2, "kcal": 350}, "rating": "good", "verdict": "", "ingredients": ["3 eggs", "15 g butter", "80 g mushrooms, sliced", "1 handful baby spinach", "1 tbsp chives, chopped", "Salt and pepper"], "method": ["Melt half the butter in a non-stick pan over medium-high heat and cook the mushrooms 3 minutes until golden. Add the spinach until it wilts, then tip out.", "Beat the eggs with salt and pepper.", "Melt the rest of the butter, pour in the eggs and stir gently for 20 seconds, then let it set.", "Spoon the mushrooms and spinach over one half, fold over and slide onto a plate. Top with chives."], "tips": ["Add a few slices of ham or leftover steak for a bigger meal."], "warnings": [], "added": "2026-11-24"}, {"id": "korean-steamed-egg", "name": "Korean steamed egg (gyeran jjim)", "source": {"label": "Made for your tastes"}, "meal": ["Breakfast", "Lunch"], "types": ["Eggs", "Quick & easy", "Veg & sides"], "time": "15 min", "servings": 2, "perServing": {"netCarbs": 1, "kcal": 170}, "rating": "good", "verdict": "", "ingredients": ["4 eggs", "200 ml chicken stock or water", "1 tsp fish sauce or 1/2 tsp salt", "1 spring onion, finely sliced", "1 tsp sesame oil", "Pinch of chilli flakes and sesame seeds"], "method": ["Whisk the eggs, stock and fish sauce until smooth.", "Pour into a small heatproof bowl or claypot and stir in most of the spring onion.", "Steam over simmering water, covered, for 10 to 12 minutes until just set and puffy (or cook in a small pot on low heat with the lid on).", "Drizzle with sesame oil and top with the rest of the spring onion, chilli and sesame seeds."], "tips": ["Great next to bulgogi or pork belly."], "warnings": [], "added": "2026-11-24"}, {"id": "soy-marinated-eggs", "name": "Soy-marinated eggs", "source": {"label": "Made for your tastes"}, "meal": ["Snack", "Breakfast"], "types": ["Eggs", "Snacks"], "time": "15 min + 4 hr soak", "servings": 6, "perServing": {"netCarbs": 1, "kcal": 80}, "rating": "good", "verdict": "", "ingredients": ["6 eggs", "125 ml tamari or soy sauce", "125 ml water", "1 tbsp granulated sweetener (optional, instead of sugar)", "2 garlic cloves, sliced", "1 long red chilli, sliced", "2 spring onions, sliced", "1 tsp sesame seeds"], "method": ["Boil the eggs for 6 1/2 minutes for jammy yolks, then put them straight into iced water. Peel.", "Mix the tamari, water, sweetener, garlic, chilli and spring onion in a container.", "Add the eggs, cover and refrigerate at least 4 hours or overnight. Sprinkle with sesame seeds to serve."], "tips": ["Keeps 3 days in the fridge. Great with the steamed egg or in soups."], "warnings": ["The marinade is very salty. Eat 1 or 2 at a time and don't drink the marinade."], "added": "2026-11-24"}, {"id": "bacon-egg-cups", "name": "Bacon and egg cups", "source": {"label": "Made for your tastes"}, "meal": ["Breakfast", "Snack"], "types": ["Eggs", "Pork", "Quick & easy"], "time": "25 min", "servings": 3, "perServing": {"netCarbs": 1, "kcal": 250}, "rating": "good", "verdict": "", "ingredients": ["6 short-cut bacon rashers", "6 eggs", "1 handful baby spinach, chopped", "1 tbsp chives, chopped", "Oil spray", "Salt and pepper"], "method": ["Heat the oven to 200°C fan-forced. Spray 6 holes of a muffin tin.", "Line each hole with a bacon rasher to make a cup. Add a little spinach.", "Crack an egg into each and season.", "Bake 12 to 15 minutes until the whites are set. Top with chives."], "tips": ["Make a batch on Sunday. They keep 3 days in the fridge and reheat in 30 seconds."], "warnings": ["Bacon is processed and salty. Fine a few times a week, not every day."], "added": "2026-11-24"}, {"id": "bulgogi-lettuce-cups", "name": "Beef bulgogi lettuce cups", "source": {"label": "Made for your tastes"}, "meal": ["Dinner", "Lunch"], "types": ["Steak & beef", "Quick & easy"], "time": "20 min + 30 min marinate", "servings": 4, "perServing": {"netCarbs": 4, "kcal": 360}, "rating": "good", "verdict": "", "ingredients": ["600 g scotch fillet or rump, very thinly sliced (or bulgogi beef from an Asian grocer)", "3 tbsp tamari or soy sauce", "1 tbsp sesame oil", "3 garlic cloves, minced", "1 tbsp grated ginger", "1 tsp granulated sweetener (optional, instead of sugar and pear)", "1/2 tsp black pepper", "3 spring onions, sliced", "1 butter lettuce, leaves separated", "1 Lebanese cucumber, cut into sticks", "Kimchi and sesame seeds, to serve"], "method": ["Mix the tamari, sesame oil, garlic, ginger, sweetener and pepper. Toss through the beef and leave 30 minutes (or overnight).", "Heat a large frying pan until very hot. Cook the beef in two batches for 2 to 3 minutes until browned.", "Toss through the spring onion.", "Serve in lettuce leaves with cucumber, kimchi and sesame seeds."], "tips": ["Pork shoulder slices work too (that's dwaeji bulgogi). Add 1 tsp gochugaru for spice."], "warnings": [], "added": "2026-11-24"}, {"id": "pork-larb", "name": "Pork larb lettuce cups", "source": {"label": "Made for your tastes"}, "meal": ["Lunch", "Dinner"], "types": ["Pork", "Quick & easy"], "time": "15 min", "servings": 4, "perServing": {"netCarbs": 4, "kcal": 330}, "rating": "good", "verdict": "", "ingredients": ["500 g pork mince", "1 tbsp oil", "2 tbsp fish sauce", "3 tbsp lime juice", "2 eschalots, thinly sliced", "1 stalk lemongrass, finely chopped (or 1 tbsp paste)", "1/2 tsp chilli flakes", "1 large handful mint leaves", "1 large handful coriander", "2 spring onions, sliced", "1 iceberg or cos lettuce, leaves separated", "1 Lebanese cucumber, sliced"], "method": ["Heat the oil in a frying pan over high heat. Add the pork and lemongrass and cook 6 to 8 minutes, breaking it up, until cooked and a little crispy.", "Take off the heat. Stir in the fish sauce, lime juice, chilli and eschalots.", "Toss through the herbs and spring onion.", "Spoon into lettuce cups and serve with cucumber."], "tips": ["Chicken or beef mince work just as well.", "The traditional version uses toasted rice powder; leave it out."], "warnings": [], "added": "2026-11-24"}, {"id": "sheet-pan-chicken-thighs", "name": "Sheet-pan chicken thighs with mushrooms and broccoli", "source": {"label": "Made for your tastes"}, "meal": ["Dinner"], "types": ["Chicken", "Quick & easy"], "time": "45 min", "servings": 4, "perServing": {"netCarbs": 6, "kcal": 580}, "rating": "good", "verdict": "", "ingredients": ["8 chicken thighs, bone in and skin on (about 1.2 kg)", "400 g mushrooms (cup or Swiss brown), halved", "1 head broccoli (about 400 g), cut into florets", "4 garlic cloves, smashed", "2 tbsp olive oil", "1 lemon, halved", "4 sprigs thyme or rosemary", "Salt and pepper"], "method": ["Heat the oven to 220°C fan-forced.", "Rub the chicken with half the oil, salt and pepper and put skin side up on a large tray. Roast 20 minutes.", "Toss the mushrooms, broccoli and garlic with the rest of the oil and add to the tray with the herbs and lemon.", "Roast 20 minutes more until the skin is crisp and the chicken is cooked through. Squeeze the roasted lemon over."], "tips": ["One tray, almost no washing up. Leftovers are great in the egg drop soup."], "warnings": ["Fairly high in calories (about 580 a serve) because of the skin. Remove the skin for a lighter meal."], "added": "2026-11-24"}, {"id": "garlic-chilli-calamari", "name": "Garlic chilli calamari", "source": {"label": "Made for your tastes"}, "meal": ["Lunch", "Dinner"], "types": ["Seafood", "Quick & easy"], "time": "15 min", "servings": 2, "perServing": {"netCarbs": 6, "kcal": 330}, "rating": "good", "verdict": "", "ingredients": ["500 g squid tubes, cleaned", "2 tbsp olive oil", "3 garlic cloves, sliced", "1 long red chilli, sliced", "1 lemon", "2 tbsp parsley, chopped", "2 handfuls rocket", "Salt and pepper"], "method": ["Cut the squid open, score the inside in a criss-cross pattern and cut into pieces. Pat dry and season.", "Heat a large frying pan until smoking. Add half the oil and the squid and cook 1 to 2 minutes until it curls and turns white. Don't overcook.", "Lower the heat, add the rest of the oil, garlic and chilli for 30 seconds.", "Squeeze in lemon, toss through parsley and serve on rocket."], "tips": ["Frozen squid tubes from the supermarket are cheap and work well."], "warnings": [], "added": "2026-11-24"}, {"id": "tuna-stuffed-avocado", "name": "Tuna-stuffed avocado", "source": {"label": "Made for your tastes"}, "meal": ["Lunch", "Snack"], "types": ["Seafood", "Quick & easy"], "time": "5 min", "servings": 1, "perServing": {"netCarbs": 4, "kcal": 480}, "rating": "good", "verdict": "", "ingredients": ["1 ripe avocado, halved, stone removed", "1 tin tuna in olive oil (95 g), drained", "1/4 Lebanese cucumber, finely diced", "1 tsp capers, chopped", "1 spring onion, sliced", "Squeeze of lemon", "Pinch of chilli flakes, salt and pepper"], "method": ["Mix the tuna, cucumber, capers, spring onion, lemon, chilli, salt and pepper.", "Pile into the avocado halves and eat with a spoon."], "tips": ["Swap the tuna for tinned salmon or smoked trout."], "warnings": [], "added": "2026-11-24"}, {"id": "prosciutto-asparagus", "name": "Prosciutto-wrapped asparagus", "source": {"label": "Made for your tastes"}, "meal": ["Snack"], "types": ["Pork", "Snacks", "Veg & sides"], "time": "15 min", "servings": 2, "perServing": {"netCarbs": 3, "kcal": 180}, "rating": "good", "verdict": "", "ingredients": ["1 bunch asparagus (about 12 spears), woody ends snapped off", "6 slices prosciutto, halved lengthways", "1 tbsp olive oil", "Lemon wedges and pepper, to serve"], "method": ["Heat the oven to 200°C fan-forced.", "Wrap each spear in a strip of prosciutto. Lay on a tray and drizzle with oil.", "Bake 10 to 12 minutes until the prosciutto is crisp. Serve with lemon and pepper."], "tips": ["Also good wrapped around green beans or with a soft-boiled egg for dipping."], "warnings": ["Prosciutto is cured and salty. Keep it to snack-sized portions."], "added": "2026-11-24"}, {"id": "dark-chocolate-bark", "name": "Dark chocolate nut bark", "source": {"label": "Made for your tastes"}, "meal": ["Dessert", "Snack"], "types": ["Desserts"], "time": "15 min + 1 hr set", "servings": 12, "perServing": {"netCarbs": 3, "kcal": 135}, "rating": "good", "verdict": "", "ingredients": ["200 g dark chocolate, 85% cocoa or higher (e.g. Lindt 90%)", "50 g almonds, roughly chopped", "40 g macadamias, roughly chopped", "1 tbsp pumpkin seeds", "Pinch of flaky salt"], "method": ["Line a tray with baking paper.", "Melt the chocolate in a bowl over simmering water (or in 20-second bursts in the microwave).", "Spread thinly on the tray and scatter over the nuts, seeds and salt.", "Refrigerate 1 hour until set, then break into 12 pieces. Keep in the fridge."], "tips": ["Freeze half so it's not all in reach."], "warnings": ["High in calories (about 135 a piece). Stick to 1 or 2 pieces.", "Use 85% cocoa or higher. 70% chocolate has much more sugar."], "added": "2026-11-24"}, {"id": "coffee-jelly", "name": "Coffee jelly", "source": {"label": "Made for your tastes"}, "meal": ["Dessert"], "types": ["Desserts"], "time": "10 min + 3 hr set", "servings": 4, "perServing": {"netCarbs": 0, "kcal": 15}, "rating": "good", "verdict": "", "ingredients": ["500 ml strong black coffee (decaf for evenings)", "3 tsp powdered gelatine", "2 tbsp granulated sweetener (erythritol or allulose)", "Optional: a splash of unsweetened almond milk to serve"], "method": ["Sprinkle the gelatine over 60 ml of the coffee and leave 5 minutes to soften.", "Heat the rest of the coffee until hot but not boiling. Stir in the softened gelatine and sweetener until dissolved.", "Pour into 4 small glasses or a dish and refrigerate 3 hours until set.", "Serve as is, or cut into cubes with a splash of almond milk."], "tips": ["A light Japanese-style dessert that's almost zero carb."], "warnings": ["Contains caffeine. Use decaf if you're having it at night."], "added": "2026-11-24"}, {"id": "chocolate-strawberries", "name": "Dark chocolate strawberries", "source": {"label": "Made for your tastes"}, "meal": ["Dessert"], "types": ["Desserts"], "time": "15 min", "servings": 4, "perServing": {"netCarbs": 6, "kcal": 120}, "rating": "good", "verdict": "", "ingredients": ["250 g strawberries, washed and dried well", "60 g dark chocolate, 90% cocoa", "1 tsp coconut oil"], "method": ["Line a plate with baking paper.", "Melt the chocolate with the coconut oil.", "Dip each strawberry halfway, let the extra drip off and put on the plate.", "Chill 15 minutes until set."], "tips": ["Raspberries are even lower in carbs if you want to swap."], "warnings": ["Strawberries have natural sugar. Stick to about 4 or 5 berries a serve."], "added": "2026-11-24"}]</script>
 <script>
+document.body.classList.add("s-"+(document.getElementById("view").dataset.style||"b"));
 const has=(r,k,v)=>(r[k]||[]).includes(v);
 const ICON={
- sun:'<circle cx="24" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></g>',
- bowl:'<path d="M6 22h36c-1 11-9 17-18 17S7 33 6 22z" fill="currentColor"/><path d="M17 17c-2-3 2-5 0-8M24 17c-2-3 2-5 0-8M31 17c-2-3 2-5 0-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
- plate:'<circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="24" cy="24" r="9" fill="currentColor"/>',
+ sun:'<circle cx="24" cy="24" r="8" fill="currentColor"/><g stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M24 5v5M24 38v5M5 24h5M38 24h5M11 11l3.5 3.5M33.5 33.5 37 37M37 11l-3.5 3.5M14.5 33.5 11 37"/></g>',
  salad:'<path d="M6 24h36c-1 10-9 15-18 15S7 34 6 24z" fill="currentColor"/><path d="M14 22c0-8 6-12 12-12-1 6-5 11-12 12zM24 22c2-6 8-9 13-8-2 5-7 8-13 8z" fill="currentColor"/>',
+ plate:'<circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="24" cy="24" r="8" fill="currentColor"/>',
  nut:'<ellipse cx="17" cy="26" rx="9" ry="12" fill="currentColor" transform="rotate(-20 17 26)"/><ellipse cx="32" cy="22" rx="8" ry="11" fill="currentColor" transform="rotate(20 32 22)"/>',
- choc:'<rect x="9" y="9" width="30" height="30" rx="4" fill="currentColor"/><path d="M19 9v30M29 9v30M9 19h30M9 29h30" stroke="var(--paper)" stroke-width="2" opacity=".5"/>',
- egg:'<path d="M24 5c8 0 14 13 14 22a14 14 0 0 1-28 0C10 18 16 5 24 5z" fill="currentColor"/><circle cx="24" cy="29" r="6" fill="var(--paper)" opacity=".6"/>',
- steak:'<path d="M10 16c6-9 22-10 29-2 6 7 2 20-8 23-6 2-9-3-15-2-7 1-11-11-6-19z" fill="currentColor"/><ellipse cx="28" cy="22" rx="5" ry="4" fill="var(--paper)" opacity=".6"/>',
- rasher:'<path d="M6 16c6-6 12 6 18 0s12 6 18 0v9c-6 6-12-6-18 0s-12-6-18 0z" fill="currentColor"/><path d="M6 31c6-6 12 6 18 0s12 6 18 0v4c-6 6-12-6-18 0s-12-6-18 0z" fill="currentColor" opacity=".7"/>',
+ choc:'<rect x="9" y="9" width="30" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M19 9v30M29 9v30M9 19h30M9 29h30" stroke="currentColor" stroke-width="2.5"/>',
+ bowl:'<path d="M6 22h36c-1 11-9 17-18 17S7 33 6 22z" fill="currentColor"/><path d="M17 17c-2-3 2-5 0-8M24 17c-2-3 2-5 0-8M31 17c-2-3 2-5 0-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
+ egg:'<path d="M24 5c8 0 14 13 14 22a14 14 0 0 1-28 0C10 18 16 5 24 5z" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="24" cy="29" r="6" fill="currentColor"/>',
+ steak:'<path d="M10 16c6-9 22-10 29-2 6 7 2 20-8 23-6 2-9-3-15-2-7 1-11-11-6-19z" fill="currentColor"/>',
+ rasher:'<path d="M6 16c6-6 12 6 18 0s12 6 18 0v9c-6 6-12-6-18 0s-12-6-18 0z" fill="currentColor"/><path d="M6 31c6-6 12 6 18 0s12 6 18 0v4c-6 6-12-6-18 0s-12-6-18 0z" fill="currentColor"/>',
  leg:'<path d="M30 6c8 0 12 7 9 14-2 5-8 7-12 6l-9 9a4 4 0 1 1-6 1 4 4 0 1 1 1-6l9-9c-1-4 1-10 6-13 0 0 1-2 2-2z" fill="currentColor"/>',
- fish:'<path d="M4 24c8-10 22-12 32-2l7-6v16l-7-6C26 36 12 34 4 24z" fill="currentColor"/><circle cx="14" cy="22" r="2.5" fill="var(--paper)"/>',
+ fish:'<path d="M4 24c8-10 22-12 32-2l7-6v16l-7-6C26 36 12 34 4 24z" fill="currentColor"/>',
  bolt:'<path d="M27 4 10 27h12l-3 17 18-24H25z" fill="currentColor"/>',
- mush:'<path d="M5 24C6 10 42 10 43 24c-12 3-26 3-38 0z" fill="currentColor"/><path d="M19 26h10c1 6 1 11-1 16h-8c-2-5-2-10-1-16z" fill="currentColor" opacity=".75"/>',
+ mush:'<path d="M5 24C6 10 42 10 43 24c-12 3-26 3-38 0z" fill="currentColor"/><path d="M19 26h10c1 6 1 11-1 16h-8c-2-5-2-10-1-16z" fill="currentColor"/>',
  all:'<rect x="7" y="7" width="15" height="15" rx="3" fill="currentColor"/><rect x="26" y="7" width="15" height="15" rx="3" fill="currentColor"/><rect x="7" y="26" width="15" height="15" rx="3" fill="currentColor"/><rect x="26" y="26" width="15" height="15" rx="3" fill="currentColor"/>'
 };
 const CATS=[
- {g:"By meal",k:"breakfast",n:"Breakfast",i:"sun",c:"ochre",f:r=>has(r,"meal","Breakfast")},
- {g:"By meal",k:"lunch",n:"Lunch",i:"salad",c:"olive",f:r=>has(r,"meal","Lunch")},
- {g:"By meal",k:"dinner",n:"Dinner",i:"plate",c:"clay",f:r=>has(r,"meal","Dinner")},
- {g:"By meal",k:"snacks",n:"Snacks",i:"nut",c:"dune",f:r=>has(r,"meal","Snack")||has(r,"types","Snacks")},
- {g:"By meal",k:"desserts",n:"Desserts",i:"choc",c:"clay",f:r=>has(r,"meal","Dessert")||has(r,"types","Desserts")},
- {g:"By type",k:"quick",n:"Quick & easy",i:"bolt",c:"ochre",f:r=>has(r,"types","Quick & easy")},
- {g:"By type",k:"soups",n:"Soups & hotpots",i:"bowl",c:"clay",f:r=>has(r,"types","Soups")},
- {g:"By type",k:"eggs",n:"Egg dishes",i:"egg",c:"dune",f:r=>has(r,"types","Eggs")},
- {g:"By type",k:"beef",n:"Steak & beef",i:"steak",c:"clay",f:r=>has(r,"types","Steak & beef")},
- {g:"By type",k:"pork",n:"Pork",i:"rasher",c:"olive",f:r=>has(r,"types","Pork")},
- {g:"By type",k:"chicken",n:"Chicken",i:"leg",c:"ochre",f:r=>has(r,"types","Chicken")},
- {g:"By type",k:"seafood",n:"Seafood",i:"fish",c:"olive",f:r=>has(r,"types","Seafood")},
- {g:"By type",k:"sides",n:"Veg & sides",i:"mush",c:"dune",f:r=>has(r,"types","Veg & sides")||has(r,"meal","Side")},
- {g:"By type",k:"all",n:"Everything",i:"all",c:"olive",f:r=>true}
+ {g:"By meal",k:"breakfast",n:"Breakfast",i:"sun",f:r=>has(r,"meal","Breakfast")},
+ {g:"By meal",k:"lunch",n:"Lunch",i:"salad",f:r=>has(r,"meal","Lunch")},
+ {g:"By meal",k:"dinner",n:"Dinner",i:"plate",f:r=>has(r,"meal","Dinner")},
+ {g:"By meal",k:"snacks",n:"Snacks",i:"nut",f:r=>has(r,"meal","Snack")||has(r,"types","Snacks")},
+ {g:"By meal",k:"desserts",n:"Desserts",i:"choc",f:r=>has(r,"meal","Dessert")||has(r,"types","Desserts")},
+ {g:"By type",k:"quick",n:"Quick & easy",i:"bolt",f:r=>has(r,"types","Quick & easy")},
+ {g:"By type",k:"soups",n:"Soups & hotpots",i:"bowl",f:r=>has(r,"types","Soups")},
+ {g:"By type",k:"eggs",n:"Egg dishes",i:"egg",f:r=>has(r,"types","Eggs")},
+ {g:"By type",k:"beef",n:"Steak & beef",i:"steak",f:r=>has(r,"types","Steak & beef")},
+ {g:"By type",k:"pork",n:"Pork",i:"rasher",f:r=>has(r,"types","Pork")},
+ {g:"By type",k:"chicken",n:"Chicken",i:"leg",f:r=>has(r,"types","Chicken")},
+ {g:"By type",k:"seafood",n:"Seafood",i:"fish",f:r=>has(r,"types","Seafood")},
+ {g:"By type",k:"sides",n:"Veg & sides",i:"mush",f:r=>has(r,"types","Veg & sides")||has(r,"meal","Side")},
+ {g:"By type",k:"all",n:"Everything",i:"all",f:r=>true}
 ];
-let recipes=[], q="";
+let recipes=[], q="", from="";
 const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k)||"null")??d}catch(e){return d}};
 const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 let picks=load("kk-picks",[]), got=load("kk-got",[]);
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const warnIcon='<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 15 14H1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 6v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="12" r=".9" fill="currentColor"/></svg>';
 const plural=n=>n+(n===1?" recipe":" recipes");
 
-function card(r){
+function home(){
+  return `<h1 class="ask">What would you like?</h1>`+["By meal","By type"].map(g=>`<p class="label">${g}</p><div class="tiles">${
+    CATS.filter(c=>c.g===g).map(c=>`<button class="tile" data-go="${c.k}"><svg viewBox="0 0 48 48" aria-hidden="true">${ICON[c.i]}</svg><div><strong>${c.n}</strong><span>${plural(recipes.filter(c.f).length)}</span></div></button>`).join("")
+  }</div>`).join("");
+}
+function rows(items){
+  return items.length?`<ul class="rows">${items.map(r=>`<li><button data-go="r-${esc(r.id)}"><strong>${esc(r.name)}</strong><small>${(r.warnings||[]).length?'<span class="dot" aria-label="Has a note"></span>':""}${esc(r.time||"")} · Serves ${esc(r.servings)}${picks.includes(r.id)?' · <span class="on">On your list</span>':""}</small><span class="chev" aria-hidden="true">›</span></button></li>`).join("")}</ul>`:`<p class="empty">Nothing here yet.</p>`;
+}
+function cat(c){
+  const items=recipes.filter(c.f);
+  return `<button class="back" data-go="">← All categories</button><div class="ttl"><h2>${esc(c.n)}</h2><p>${plural(items.length)}</p></div>${rows(items)}`;
+}
+function recipe(r){
   const on=picks.includes(r.id);
   const link=r.source&&r.source.url?`<a href="${esc(r.source.url)}" target="_blank" rel="noopener">${esc(r.source.label||"Original")}</a>`:esc(r.source&&r.source.label||"");
-  return `<article class="card">
-    <div class="head">
-      <h3>${esc(r.name)}</h3>
-      <div class="meta"><span>${esc(r.time||"")}</span><span>Serves ${esc(r.servings)}</span><span>${(r.meal||[]).map(esc).join(" · ")}</span></div>
-      ${(r.warnings||[]).map(w=>`<div class="warn">${warnIcon}<span>${esc(w)}</span></div>`).join("")}
-    </div>
-    <div class="ing"><h4>Ingredients</h4><ul>${(r.ingredients||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>
-    <div class="acts"><button class="add" data-id="${esc(r.id)}" aria-pressed="${on}">${on?"✓ On shopping list":"+ Add to shopping list"}</button></div>
-    <details class="cook"><summary>How to cook</summary><div class="body">
-      <ol>${(r.method||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ol>
-      ${(r.tips||[]).length?`<div><h4>Tips</h4><ul>${r.tips.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>`:""}
-      ${r.verdict?`<p class="note">${esc(r.verdict)}</p>`:""}
-      <div class="src">Source: ${link}</div>
-    </div></details>
+  const c=CATS.find(c=>c.k===from);
+  return `<button class="back" data-go="${c?c.k:""}">← ${c?esc(c.n):"All categories"}</button>
+  <article class="recipe">
+    <div class="ttl"><h2>${esc(r.name)}</h2><div class="facts"><span>${esc(r.time||"")}</span><span>Serves ${esc(r.servings)}</span><span>${(r.meal||[]).map(esc).join(", ")}</span></div></div>
+    ${(r.warnings||[]).length?`<div class="warns">${r.warnings.map(w=>`<div class="warn">${esc(w)}</div>`).join("")}</div>`:""}
+    <section class="sec"><h3>Ingredients</h3><ul class="ing">${(r.ingredients||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ul></section>
+    <button class="add" data-add="${esc(r.id)}" aria-pressed="${on}">${on?"✓ On your shopping list":"Add to shopping list"}</button>
+    <section class="sec"><h3>Method</h3><ol class="steps">${(r.method||[]).map(i=>`<li><span>${esc(i)}</span></li>`).join("")}</ol></section>
+    ${(r.tips||[]).length?`<section class="sec"><h3>Tips</h3><ul class="tips">${r.tips.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></section>`:""}
+    <p class="src">Source: ${link}</p>
   </article>`;
 }
-function homeView(){
-  const groups=[...new Set(CATS.map(c=>c.g))];
-  return `<h2 class="ask">What would you like?</h2>`+groups.map(g=>`<section class="group"><h3>${g}</h3><div class="tiles">${
-    CATS.filter(c=>c.g===g).map(c=>{const n=recipes.filter(c.f).length;return `<button class="tile ${c.c}" data-k="${c.k}"><svg viewBox="0 0 48 48" aria-hidden="true">${ICON[c.i]}</svg><div><strong>${c.n}</strong><span>${plural(n)}</span></div></button>`}).join("")
-  }</div></section>`).join("");
-}
-function listView(title,items){
-  return `<div class="crumb"><h2>${esc(title)}</h2><p>${plural(items.length)}</p></div>`+
-    (items.length?`<div class="grid">${items.map(card).join("")}</div>`:`<div class="empty">Nothing here yet.</div>`);
-}
-function shopView(){
+function shop(){
   const sel=recipes.filter(r=>picks.includes(r.id));
-  if(!sel.length)return `<div class="crumb"><h2>Shopping list</h2></div><div class="empty">Your list is empty. Open a category and tap “Add to shopping list” on the recipes you want to cook.</div>`;
+  const head=`<button class="back" data-go="">← All categories</button><div class="ttl"><h2>Shopping list</h2>`;
+  if(!sel.length)return head+`<p>Empty for now. Open a recipe and tap “Add to shopping list”.</p></div>`;
   const seen=new Set(), items=[];
   sel.forEach(r=>(r.ingredients||[]).forEach(i=>{const k=i.toLowerCase();if(!seen.has(k)){seen.add(k);items.push(i);}}));
-  return `<section class="shop"><div class="row"><h2>Shopping list</h2><div class="btns"><button class="btn" id="copy">Copy</button><button class="btn" id="clear">Clear list</button></div></div>
-    <p class="for">For: ${sel.map(r=>esc(r.name)).join(" · ")}</p>
+  return head+`<p>For ${sel.length} ${sel.length===1?"recipe":"recipes"}. Tick things off as you shop.</p></div>
     <ul class="items">${items.map((i,n)=>`<li><label><input type="checkbox" id="it-${n}" data-k="${esc(i.toLowerCase())}" ${got.includes(i.toLowerCase())?"checked":""}><span>${esc(i)}</span></label></li>`).join("")}</ul>
-    <p class="for">Tick things off as you shop. Pantry staples like salt and oil are included, so skip what you have. Saved on this device only.</p></section>
-    <div class="crumb"><h2>Recipes on your list</h2></div><div class="grid">${sel.map(card).join("")}</div>`;
+    <div class="btns"><button class="btn" id="copy">Copy list</button><button class="btn" id="clear">Clear list</button></div>
+    <p class="label">Recipes on your list</p>${rows(sel)}`;
 }
 function route(){
   const h=location.hash.replace("#","");
   const ql=q.trim().toLowerCase();
   let html;
-  if(ql){const items=recipes.filter(r=>(r.name+" "+(r.ingredients||[]).join(" ")).toLowerCase().includes(ql));html=listView(`Results for “${q.trim()}”`,items);}
-  else if(h==="list")html=shopView();
-  else{const c=CATS.find(c=>c.k===h);html=c?listView(c.n,recipes.filter(c.f)):homeView();}
+  if(ql){html=`<div class="ttl"><h2>Results</h2><p>for “${esc(q.trim())}”</p></div>`+rows(recipes.filter(r=>(r.name+" "+(r.ingredients||[]).join(" ")).toLowerCase().includes(ql)));}
+  else if(h==="list")html=shop();
+  else if(h.startsWith("r-")){const r=recipes.find(r=>r.id===h.slice(2));html=r?recipe(r):home();}
+  else{const c=CATS.find(c=>c.k===h);if(c)from=c.k;else if(!h)from="";html=c?cat(c):home();}
   $("view").innerHTML=html;
-  $("homeBtn").hidden=!(h||ql);
   $("count").textContent=picks.length;
 }
-function go(k){if(location.hash.replace("#","")===k){route();}else{location.hash=k;}window.scrollTo({top:document.querySelector(".bar").offsetTop,behavior:"smooth"});}
-window.addEventListener("hashchange",route);
+function go(k){
+  if(q){q="";$("q").value="";}
+  if(location.hash.replace("#","")===k)route();else location.hash=k;
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",()=>{route();window.scrollTo(0,0);});
 $("view").addEventListener("click",e=>{
-  const t=e.target.closest(".tile");if(t){go(t.dataset.k);return;}
-  const b=e.target.closest(".add");
-  if(b){const id=b.dataset.id;picks=picks.includes(id)?picks.filter(x=>x!==id):[...picks,id];save("kk-picks",picks);
-    const on=picks.includes(id);b.setAttribute("aria-pressed",on);b.textContent=on?"✓ On shopping list":"+ Add to shopping list";$("count").textContent=picks.length;return;}
+  const g=e.target.closest("[data-go]");if(g){go(g.dataset.go);return;}
+  const a=e.target.closest("[data-add]");
+  if(a){const id=a.dataset.add;picks=picks.includes(id)?picks.filter(x=>x!==id):[...picks,id];save("kk-picks",picks);
+    const on=picks.includes(id);a.setAttribute("aria-pressed",on);a.textContent=on?"✓ On your shopping list":"Add to shopping list";$("count").textContent=picks.length;return;}
   if(e.target.id==="clear"){picks=[];got=[];save("kk-picks",picks);save("kk-got",got);route();return;}
   if(e.target.id==="copy"){
     const lines=[...document.querySelectorAll(".items li")].filter(li=>!li.querySelector("input").checked).map(li=>"- "+li.textContent.trim());
-    const txt="Shopping list\n"+lines.join("\n");const btn=e.target;
-    const fallback=()=>{const r=document.createRange();r.selectNodeContents(document.querySelector(".items"));const s=getSelection();s.removeAllRanges();s.addRange(r);};
-    try{navigator.clipboard.writeText(txt).then(()=>{btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy",1500)},fallback)}catch(err){fallback()}
+    const btn=e.target;const fallback=()=>{const r=document.createRange();r.selectNodeContents(document.querySelector(".items"));const s=getSelection();s.removeAllRanges();s.addRange(r);};
+    try{navigator.clipboard.writeText("Shopping list\n"+lines.join("\n")).then(()=>{btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy list",1500)},fallback)}catch(err){fallback()}
   }
 });
 $("view").addEventListener("change",e=>{const k=e.target.dataset&&e.target.dataset.k;if(!k)return;got=e.target.checked?[...new Set([...got,k])]:got.filter(x=>x!==k);save("kk-got",got);});
-$("homeBtn").onclick=()=>{q="";$("q").value="";if(location.hash){location.hash="";}else route();};
-$("listBtn").onclick=()=>{q="";$("q").value="";go("list");};
+$("listBtn").onclick=()=>go("list");
 $("q").addEventListener("input",e=>{q=e.target.value;route();});
 recipes=JSON.parse($("recipe-data").textContent).sort((a,b)=>a.name.localeCompare(b.name));
 route();
