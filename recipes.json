@@ -1350,5 +1350,491 @@
   "added": "2026-11-24",
   "photo": "images/recipes/chocolate-strawberries.webp",
   "alt": "Fresh strawberries dipped halfway in dark chocolate"
+ },
+ {
+  "id": "spicy-korean-pork",
+  "name": "Spicy Korean pork stir-fry (jeyuk)",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner",
+   "Lunch"
+  ],
+  "types": [
+   "Pork",
+   "Quick & easy"
+  ],
+  "time": "25 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 5,
+   "protein": 31,
+   "fat": 22,
+   "kcal": 345
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "600 g pork shoulder steaks or pork belly, thinly sliced",
+   "2 tbsp gochugaru (Korean chilli flakes)",
+   "3 tbsp tamari or soy sauce",
+   "4 garlic cloves, minced",
+   "1 tbsp grated ginger",
+   "1 tsp granulated sweetener (optional)",
+   "1 tbsp sesame oil",
+   "1 tbsp vegetable oil",
+   "1/2 brown onion, sliced",
+   "2 cups wombok (Chinese cabbage), sliced",
+   "3 spring onions, cut into lengths",
+   "Lettuce leaves and sesame seeds, to serve"
+  ],
+  "method": [
+   "Mix the gochugaru, tamari, garlic, ginger, sweetener and sesame oil. Toss with the pork and leave 15 minutes.",
+   "Heat the oil in a large frying pan or wok over high heat.",
+   "Add the pork and stir-fry 5 to 6 minutes until cooked and slightly charred.",
+   "Add the onion and cabbage and stir-fry 2 minutes. Toss through the spring onion.",
+   "Serve wrapped in lettuce leaves with sesame seeds."
+  ],
+  "tips": [
+   "Gochugaru is at Coles, Woolworths (Asian aisle) or Amazon.",
+   "The restaurant version uses gochujang and sugar; this one keeps the heat without the sugar."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ginger-pork-shogayaki",
+  "name": "Japanese ginger pork (shogayaki)",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner",
+   "Lunch"
+  ],
+  "types": [
+   "Pork",
+   "Quick & easy"
+  ],
+  "time": "20 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 7,
+   "protein": 43,
+   "fat": 23,
+   "kcal": 405
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "400 g pork loin steaks, thinly sliced",
+   "2 tbsp tamari or soy sauce",
+   "1 tbsp grated ginger",
+   "1 tbsp sake or dry sherry (optional)",
+   "1/2 brown onion, sliced",
+   "1 tbsp vegetable oil",
+   "150 g cabbage, finely shredded",
+   "Lemon wedge and spring onion, to serve"
+  ],
+  "method": [
+   "Mix the tamari, ginger and sake.",
+   "Heat the oil in a frying pan over high heat. Fry the onion 2 minutes.",
+   "Add the pork in one layer and cook 1 to 2 minutes a side until browned.",
+   "Pour in the ginger sauce and toss until the pork is glazed, about 1 minute.",
+   "Serve on a pile of shredded cabbage with lemon and spring onion."
+  ],
+  "tips": [
+   "Bagged coleslaw mix (no dressing) saves shredding the cabbage."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "steak-mushroom-sauce",
+  "name": "Steak with mushroom and thyme pan sauce",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "types": [
+   "Steak & beef"
+  ],
+  "time": "25 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 8,
+   "protein": 48,
+   "fat": 33,
+   "kcal": 520
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "2 sirloin or porterhouse steaks (about 200 g each)",
+   "250 g mushrooms, sliced",
+   "20 g butter",
+   "1 tbsp olive oil",
+   "2 garlic cloves, sliced",
+   "4 sprigs thyme",
+   "125 ml salt-reduced beef stock",
+   "1 tsp Worcestershire sauce",
+   "150 g green beans, trimmed",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Take the steaks out of the fridge 20 minutes ahead. Pat dry and season well.",
+   "Heat the oil in a heavy pan until very hot. Cook the steaks 3 minutes a side for medium-rare. Rest on a plate.",
+   "Lower the heat, add the butter, mushrooms, garlic and thyme and cook 4 to 5 minutes until golden.",
+   "Pour in the stock and Worcestershire and bubble 2 minutes until it reduces a little. Add any resting juices.",
+   "Meanwhile, steam or boil the green beans 3 minutes.",
+   "Slice the steak and spoon the mushroom sauce over."
+  ],
+  "tips": [
+   "No cream needed: the stock reduction gives a glossy sauce."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "beef-broccoli",
+  "name": "Beef and broccoli stir-fry",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "types": [
+   "Steak & beef",
+   "Quick & easy"
+  ],
+  "time": "20 min",
+  "servings": 3,
+  "perServing": {
+   "netCarbs": 7,
+   "protein": 41,
+   "fat": 19,
+   "kcal": 365
+  },
+  "rating": "good",
+  "verdict": "Oyster sauce has a little sugar, so 1 tablespoon for the whole pan is plenty.",
+  "ingredients": [
+   "500 g rump steak, thinly sliced",
+   "1 head broccoli (about 400 g), cut into florets",
+   "3 tbsp tamari or soy sauce",
+   "1 tbsp oyster sauce",
+   "3 garlic cloves, minced",
+   "1 tbsp grated ginger",
+   "2 tbsp vegetable oil",
+   "1 tsp sesame oil",
+   "1/4 tsp xanthan gum (optional, to thicken)",
+   "Sesame seeds and sliced chilli, to serve"
+  ],
+  "method": [
+   "Mix the tamari, oyster sauce, garlic, ginger and sesame oil with 3 tbsp water.",
+   "Heat half the oil in a wok over high heat. Stir-fry the beef in two batches for 1 to 2 minutes, then set aside.",
+   "Add the rest of the oil and the broccoli with a splash of water. Cover and cook 3 minutes.",
+   "Return the beef, pour in the sauce and toss 1 minute. Sprinkle in the xanthan gum if you want it thicker.",
+   "Serve with sesame seeds and chilli. Have it on its own or with cauliflower rice."
+  ],
+  "tips": [
+   "Xanthan gum is in the health food aisle at Coles and Woolworths, or on Amazon."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "korean-beef-radish-soup",
+  "name": "Korean beef and radish soup (soegogi muguk)",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "types": [
+   "Soups",
+   "Steak & beef"
+  ],
+  "time": "40 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 4,
+   "protein": 17,
+   "fat": 9,
+   "kcal": 160
+  },
+  "rating": "good",
+  "verdict": "A light, clean Korean soup. Good alongside a heavier main.",
+  "ingredients": [
+   "300 g beef chuck or topside, thinly sliced",
+   "400 g daikon (white radish), cut into thin squares",
+   "1 tbsp sesame oil",
+   "4 garlic cloves, minced",
+   "2 L water",
+   "2 tbsp fish sauce",
+   "1 tbsp tamari or soy sauce",
+   "2 spring onions, sliced",
+   "Salt and pepper"
+  ],
+  "method": [
+   "Heat the sesame oil in a large pot over medium-high heat. Fry the beef and garlic 3 minutes.",
+   "Add the daikon and fry 2 minutes more.",
+   "Pour in the water, bring to the boil and skim off any foam.",
+   "Simmer 25 minutes until the radish is soft and see-through.",
+   "Season with fish sauce, tamari, salt and pepper. Top with spring onion."
+  ],
+  "tips": [
+   "Freezes well. Add a soft-boiled egg or extra beef to make it a bigger meal.",
+   "Daikon is at most Coles and Woolworths in the fresh veg section."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "steamed-barramundi",
+  "name": "Steamed barramundi with ginger and spring onion",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner"
+  ],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "20 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 3,
+   "protein": 38,
+   "fat": 20,
+   "kcal": 340
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "2 barramundi fillets (about 180 g each), skin on",
+   "3 cm piece ginger, cut into thin matchsticks",
+   "4 spring onions, cut into thin strips",
+   "2 tbsp tamari or soy sauce",
+   "2 tbsp vegetable oil",
+   "1 tsp sesame oil",
+   "Handful of coriander",
+   "2 baby bok choy, halved"
+  ],
+  "method": [
+   "Put the fish on a heatproof plate and scatter over half the ginger.",
+   "Steam over boiling water, covered, for 8 to 10 minutes until the fish flakes. Steam the bok choy alongside for the last 3 minutes.",
+   "Pour off any liquid from the plate. Top the fish with the rest of the ginger and the spring onion.",
+   "Heat the vegetable and sesame oil in a small pan until just smoking and pour it over the fish so it sizzles.",
+   "Drizzle with tamari and top with coriander."
+  ],
+  "tips": [
+   "No steamer? Wrap the fish in foil and bake at 200°C fan-forced for 12 minutes.",
+   "Snapper or salmon work too."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "salmon-poke-bowl",
+  "name": "Salmon poke bowl on cauliflower rice",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "types": [
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "20 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 8,
+   "protein": 33,
+   "fat": 37,
+   "kcal": 500
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "300 g sashimi-grade salmon, cut into cubes (or hot-smoked salmon)",
+   "300 g frozen cauliflower rice",
+   "1 avocado, sliced",
+   "1 Lebanese cucumber, sliced",
+   "2 tbsp tamari or soy sauce",
+   "1 tsp sesame oil",
+   "1 tsp grated ginger",
+   "1 spring onion, sliced",
+   "1 sheet nori, cut into strips",
+   "1 tbsp sesame seeds",
+   "Sliced chilli, to serve"
+  ],
+  "method": [
+   "Microwave or pan-fry the cauliflower rice as per the packet and let it cool a little.",
+   "Mix the tamari, sesame oil and ginger. Toss half through the salmon.",
+   "Divide the cauliflower rice between two bowls.",
+   "Top with salmon, avocado, cucumber, spring onion, nori, sesame seeds and chilli. Drizzle over the rest of the dressing."
+  ],
+  "tips": [
+   "Frozen cauliflower rice is in the freezer section at Coles and Woolworths.",
+   "Skip the pickled ginger and sweet mayo: both have added sugar."
+  ],
+  "warnings": [
+   "Raw fish. Only use fish sold as sashimi-grade and eat it the day you buy it. Use hot-smoked salmon if unsure."
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "chicken-shiitake-skewers",
+  "name": "Chicken and shiitake skewers (shio yakitori)",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Dinner",
+   "Snack"
+  ],
+  "types": [
+   "Chicken"
+  ],
+  "time": "30 min",
+  "servings": 4,
+  "perServing": {
+   "netCarbs": 3,
+   "protein": 41,
+   "fat": 20,
+   "kcal": 350
+  },
+  "rating": "good",
+  "verdict": "",
+  "ingredients": [
+   "800 g chicken thigh fillets, cut into 3 cm pieces",
+   "200 g fresh shiitake mushrooms, stems removed",
+   "1 bunch spring onions, cut into 3 cm lengths",
+   "1 tbsp vegetable oil",
+   "1 tsp salt flakes",
+   "Lemon wedges and shichimi or chilli flakes, to serve",
+   "12 bamboo skewers, soaked in water 20 minutes"
+  ],
+  "method": [
+   "Thread chicken, spring onion and mushrooms onto the skewers.",
+   "Brush with oil and season well with salt.",
+   "Cook on a hot barbecue, grill pan or under the oven grill for 10 to 12 minutes, turning, until the chicken is cooked and charred.",
+   "Serve with lemon and shichimi."
+  ],
+  "tips": [
+   "Shio means salt: no sugary teriyaki sauce needed.",
+   "Leftovers are great cold in a lunchbox."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "egg-foo-young",
+  "name": "Prawn and mushroom egg foo young",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "types": [
+   "Eggs",
+   "Seafood",
+   "Quick & easy"
+  ],
+  "time": "15 min",
+  "servings": 2,
+  "perServing": {
+   "netCarbs": 4,
+   "protein": 31,
+   "fat": 29,
+   "kcal": 400
+  },
+  "rating": "good",
+  "verdict": "The takeaway version uses a cornflour gravy; this one keeps it simple with a soy and sesame drizzle.",
+  "ingredients": [
+   "5 eggs",
+   "100 g cooked peeled prawns, chopped",
+   "100 g bean sprouts",
+   "100 g mushrooms, sliced",
+   "2 spring onions, sliced",
+   "2 tbsp vegetable oil",
+   "Sauce: 1 tbsp tamari or soy sauce, 1 tsp sesame oil, 2 tbsp water",
+   "White pepper"
+  ],
+  "method": [
+   "Beat the eggs with a pinch of white pepper. Stir in the prawns, bean sprouts, mushrooms and most of the spring onion.",
+   "Heat 1 tbsp oil in a non-stick pan over medium-high heat.",
+   "Ladle in a third of the mix and cook 2 minutes a side until golden. Repeat to make 3 omelettes, adding oil as needed.",
+   "Warm the sauce ingredients in a small pan and spoon over. Top with the rest of the spring onion."
+  ],
+  "tips": [
+   "Swap the prawns for leftover pork belly or chicken."
+  ],
+  "warnings": [],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "clear-tom-yum-prawns",
+  "name": "Clear tom yum with prawns and mushrooms",
+  "source": {
+   "label": "Made for your tastes"
+  },
+  "meal": [
+   "Lunch",
+   "Dinner"
+  ],
+  "types": [
+   "Soups",
+   "Seafood"
+  ],
+  "time": "25 min",
+  "servings": 3,
+  "perServing": {
+   "netCarbs": 5,
+   "protein": 31,
+   "fat": 3,
+   "kcal": 170
+  },
+  "rating": "good",
+  "verdict": "Low in calories and very light. Have it with a protein-heavy side if it's your main meal.",
+  "ingredients": [
+   "1 L salt-reduced chicken stock",
+   "2 stalks lemongrass, bruised and cut into lengths",
+   "5 kaffir lime leaves, torn",
+   "4 slices fresh ginger (or galangal if you can find it)",
+   "2 to 3 bird's eye chillies, bruised",
+   "400 g raw prawns, peeled with tails on",
+   "200 g mushrooms (oyster or button), halved",
+   "3 tbsp fish sauce",
+   "4 tbsp lime juice",
+   "Handful of coriander"
+  ],
+  "method": [
+   "Bring the stock, lemongrass, lime leaves, ginger and chillies to the boil. Simmer 5 minutes.",
+   "Add the mushrooms and simmer 3 minutes.",
+   "Add the prawns and cook 2 to 3 minutes until pink.",
+   "Take off the heat and stir in the fish sauce and lime juice. Taste and add more of either.",
+   "Top with coriander and serve. Don't eat the lemongrass or lime leaves."
+  ],
+  "tips": [
+   "Lemongrass and kaffir lime leaves are in the fresh herb section at Coles and Woolworths."
+  ],
+  "warnings": [
+   "Can be salty from the fish sauce and stock. Use salt-reduced stock."
+  ],
+  "added": "2026-11-24"
  }
 ]
