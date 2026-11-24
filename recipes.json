@@ -55,7 +55,9 @@
    "Veg & sides",
    "Quick & easy"
   ],
-  "time": "15 min"
+  "time": "15 min",
+  "photo": "images/recipes/creamy-garlic-mushrooms.webp",
+  "alt": "Whole mushrooms in a creamy garlic sauce with parsley and chilli flakes"
  },
  {
   "added": "2026-11-23",
@@ -102,7 +104,9 @@
   "types": [
    "Pork"
   ],
-  "time": "2 hr + overnight drying"
+  "time": "2 hr + overnight drying",
+  "photo": "images/recipes/crispy-pork-belly.webp",
+  "alt": "Slices of roast pork belly with golden crackling and garlic bok choy"
  },
  {
   "added": "2026-11-23",
@@ -148,7 +152,9 @@
    "Seafood",
    "Quick & easy"
   ],
-  "time": "20 min"
+  "time": "20 min",
+  "photo": "images/recipes/crispy-skin-salmon.webp",
+  "alt": "Crispy-skin salmon fillet with broccolini in lemon garlic butter"
  },
  {
   "added": "2026-11-23",
@@ -195,7 +201,9 @@
    "Seafood",
    "Quick & easy"
   ],
-  "time": "15 min"
+  "time": "15 min",
+  "photo": "images/recipes/garlic-butter-prawns.webp",
+  "alt": "Pink garlic butter prawns with spiralised zucchini, chilli and parsley"
  },
  {
   "added": "2026-11-23",
@@ -245,7 +253,9 @@
    "Eggs",
    "Pork"
   ],
-  "time": "20 min"
+  "time": "20 min",
+  "photo": "images/recipes/keto-full-english.webp",
+  "alt": "Fried eggs, bacon, sausage, mushrooms, grilled tomato and spinach"
  },
  {
   "added": "2026-11-23",
@@ -299,7 +309,9 @@
    "Soups",
    "Pork"
   ],
-  "time": "30 min"
+  "time": "30 min",
+  "photo": "images/recipes/keto-kimchi-stew.webp",
+  "alt": "Kimchi stew with sliced pork belly, tofu cubes and spring onions"
  },
  {
   "added": "2026-11-23",
@@ -346,7 +358,9 @@
    "Eggs",
    "Quick & easy"
   ],
-  "time": "10 min"
+  "time": "10 min",
+  "photo": "images/recipes/sardine-egg-avocado-plate.webp",
+  "alt": "Sardines, jammy boiled eggs, sliced avocado, cucumber and rocket"
  },
  {
   "added": "2026-11-23",
@@ -393,7 +407,9 @@
    "Eggs",
    "Quick & easy"
   ],
-  "time": "20 min"
+  "time": "20 min",
+  "photo": "images/recipes/steak-and-eggs-chimichurri.webp",
+  "alt": "Sliced steak topped with chimichurri beside two fried eggs and rocket"
  },
  {
   "added": "2026-11-23",
@@ -445,7 +461,9 @@
   "types": [
    "Steak & beef"
   ],
-  "time": "15 min"
+  "time": "15 min",
+  "photo": "images/recipes/steak-tartare.webp",
+  "alt": "Finely diced beef tartare topped with an egg yolk and surrounded by cucumber rounds"
  },
  {
   "id": "chanko-nabe",
@@ -498,7 +516,9 @@
    "Soups",
    "Chicken"
   ],
-  "time": "40 min"
+  "time": "40 min",
+  "photo": "images/recipes/chanko-nabe.webp",
+  "alt": "Japanese hotpot with chicken meatballs, tofu, mushrooms and greens"
  },
  {
   "id": "pork-kimchi-hotpot",
@@ -553,7 +573,9 @@
    "Soups",
    "Pork"
   ],
-  "time": "25 min"
+  "time": "25 min",
+  "photo": "images/recipes/pork-kimchi-hotpot.webp",
+  "alt": "Red kimchi hotpot with pork belly, mushrooms, tofu and poached eggs"
  },
  {
   "id": "shabu-shabu",
@@ -603,7 +625,9 @@
    "Soups",
    "Steak & beef"
   ],
-  "time": "45 min"
+  "time": "45 min",
+  "photo": "images/recipes/shabu-shabu.webp",
+  "alt": "Japanese hotpot with tofu, mushrooms and greens beside thinly sliced marbled beef"
  },
  {
   "id": "pork-mushroom-miso-soup",
@@ -655,7 +679,9 @@
    "Soups",
    "Pork"
   ],
-  "time": "25 min"
+  "time": "25 min",
+  "photo": "images/recipes/pork-mushroom-miso-soup.webp",
+  "alt": "Miso soup with sliced pork belly, mushrooms, daikon, cabbage and tofu"
  },
  {
   "id": "egg-drop-soup",
@@ -705,7 +731,9 @@
    "Eggs",
    "Quick & easy"
   ],
-  "time": "10 min"
+  "time": "10 min",
+  "photo": "images/recipes/egg-drop-soup.webp",
+  "alt": "Fine egg ribbons, sliced shiitake mushrooms and spring onions in golden broth"
  },
  {
   "id": "mushroom-spinach-omelette",
@@ -747,7 +775,9 @@
    "Add a few slices of ham or leftover steak for a bigger meal."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/mushroom-spinach-omelette.webp",
+  "alt": "Folded omelette filled with mushrooms and spinach and topped with chives"
  },
  {
   "id": "korean-steamed-egg",
@@ -790,7 +820,9 @@
    "Great next to bulgogi or pork belly."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/korean-steamed-egg.webp",
+  "alt": "Fluffy Korean steamed egg with spring onions in a black earthenware bowl"
  },
  {
   "id": "soy-marinated-eggs",
@@ -835,7 +867,9 @@
   "warnings": [
    "The marinade is very salty. Eat 1 or 2 at a time and don't drink the marinade."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/soy-marinated-eggs.webp",
+  "alt": "Halved soy-marinated eggs with jammy yolks, chilli, spring onion and sesame"
  },
  {
   "id": "bacon-egg-cups",
@@ -880,7 +914,9 @@
   "warnings": [
    "Bacon is processed and salty. Fine a few times a week, not every day."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/bacon-egg-cups.webp",
+  "alt": "Baked eggs in bacon cups with spinach and chopped chives"
  },
  {
   "id": "bulgogi-lettuce-cups",
@@ -927,7 +963,9 @@
    "Pork shoulder slices work too (that's dwaeji bulgogi). Add 1 tsp gochugaru for spice."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/bulgogi-lettuce-cups.webp",
+  "alt": "Butter lettuce cups filled with sliced bulgogi beef, cucumber and kimchi"
  },
  {
   "id": "pork-larb",
@@ -976,7 +1014,9 @@
    "The traditional version uses toasted rice powder; leave it out."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/pork-larb.webp",
+  "alt": "Lettuce cups filled with minced pork larb and fresh herbs, served with cucumber"
  },
  {
   "id": "sheet-pan-chicken-thighs",
@@ -1021,7 +1061,9 @@
   "warnings": [
    "Fairly high in calories (about 580 a serve) because of the skin. Remove the skin for a lighter meal."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/sheet-pan-chicken-thighs.webp",
+  "alt": "Roasted chicken thighs, mushrooms, broccoli and lemon on a sheet pan"
  },
  {
   "id": "garlic-chilli-calamari",
@@ -1065,7 +1107,9 @@
    "Frozen squid tubes from the supermarket are cheap and work well."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/garlic-chilli-calamari.webp",
+  "alt": "Crosshatched calamari with red chilli and garlic on a bed of rocket"
  },
  {
   "id": "tuna-stuffed-avocado",
@@ -1106,7 +1150,9 @@
    "Swap the tuna for tinned salmon or smoked trout."
   ],
   "warnings": [],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/tuna-stuffed-avocado.webp",
+  "alt": "Two avocado halves stuffed with flaked tuna, diced cucumber and spring onion"
  },
  {
   "id": "prosciutto-asparagus",
@@ -1147,7 +1193,9 @@
   "warnings": [
    "Prosciutto is cured and salty. Keep it to snack-sized portions."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/prosciutto-asparagus.webp",
+  "alt": "Roasted asparagus spears individually wrapped in prosciutto with lemon wedges"
  },
  {
   "id": "dark-chocolate-bark",
@@ -1190,7 +1238,9 @@
    "High in calories (about 135 a piece). Stick to 1 or 2 pieces.",
    "Use 85% cocoa or higher. 70% chocolate has much more sugar."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/dark-chocolate-bark.webp",
+  "alt": "Dark chocolate bark studded with almonds, macadamias and pumpkin seeds"
  },
  {
   "id": "coffee-jelly",
@@ -1230,7 +1280,9 @@
   "warnings": [
    "Contains caffeine. Use decaf if you're having it at night."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/coffee-jelly.webp",
+  "alt": "Dark coffee jelly cubes in a glass with a splash of almond milk"
  },
  {
   "id": "chocolate-strawberries",
@@ -1269,6 +1321,8 @@
   "warnings": [
    "Strawberries have natural sugar. Stick to about 4 or 5 berries a serve."
   ],
-  "added": "2026-11-24"
+  "added": "2026-11-24",
+  "photo": "images/recipes/chocolate-strawberries.webp",
+  "alt": "Fresh strawberries dipped halfway in dark chocolate"
  }
 ]
